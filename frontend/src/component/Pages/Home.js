@@ -1,6 +1,8 @@
 import React from "react";
 import "../Style.css";
 import Slider from "../Slider/Slider";
+import Footer from "../Footer/Footer";
+import Form from "../Form/Fom";
 function Home() {
   return (
     <div>
@@ -324,6 +326,7 @@ function Home() {
               src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/1000%2B_hours_pf.svg"
               alt=""
             />
+
             <h1>1000+</h1>
             <p>Hours of Live session</p>
           </div>
@@ -367,22 +370,283 @@ function Home() {
       <div className="slider-heading">
         <h1>100% of our students finishing the course have got placed</h1>
       </div>
-      <Slider/>
-
+      <Slider />
 
       {/* ---------------------new map------------------------------------------- */}
       <div className="student-map">
-        <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/you_could_be_the(web_1366).png" alt="" />
+        <img
+          src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/you_could_be_the(web_1366).png"
+          alt=""
+        />
       </div>
 
       {/* ---------------------------mentors------------------------------------- */}
       <div className="mentors">
-        <h1>PrepBytes Mentors</h1>
-        <p>PrepBytes students get mentored by industry experts who have achieved in their careers and are passionate about helping students achieve their dream.</p>
+        <div className="heading1">
+          <h1>PrepBytes Mentors</h1>
+          <p>
+            PrepBytes students get mentored by industry experts who have
+            achieved in <br></br> their careers and are passionate about helping
+            students achieve their dream.
+          </p>
+        </div>
       </div>
 
+      {/* -------------for mentor------------ */}
 
+      <div className="prepbytes-mentor">
+        <div className="mentor-1">
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/mamta_mentor_background.png"
+            alt=""
+            className="back"
+          />
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/mamta_ma'am(Mentor).png"
+            alt=""
+            className="mamta"
+          />
+          <h2>Mamta</h2>
+          <p>Co-Founder, PrepBytes</p>
+          <hr />
+          <p>
+            Mamta has a great passion for coding and motivates students to
+            pursue coding. Her mission is to use her knowledge and expertise to
+            help students get placed in their dream company.
+          </p>
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Amazon%2Bsam.png"
+            alt=""
+            className="center"
+          />
+        </div>
+        <div className="mentor-1">
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/mamta_mentor_background.png"
+            alt=""
+            className="back"
+          />
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Aditya_bhusan.png"
+            alt=""
+            className="mamta"
+          />
+          <h2>Aditya</h2>
+          <p>Co-Founder, PrepBytes</p>
+          <hr />
+          <p>
+            Mamta has a great passion for coding and motivates students to
+            pursue coding. Her mission is to use her knowledge and expertise to
+            help students get placed in their dream company.
+          </p>
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/PrepBytes.png"
+            alt=""
+            className="center"
+          />
+        </div>
+        <div className="mentor-1">
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/mamta_mentor_background.png"
+            alt=""
+            className="back"
+          />
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/aveek_sir.png"
+            alt=""
+            className="mamta"
+          />
+          <h2>Aveek</h2>
+          <p>Mentor, PrepBytes</p>
+          <hr />
+          <p>
+            Mamta has a great passion for coding and motivates students to
+            pursue coding. Her mission is to use her knowledge and expertise to
+            help students get placed in their dream company.
+          </p>
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/PrepBytes.png"
+            alt=""
+            className="center"
+          />
+        </div>
+        <div className="mentor-1">
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/mamta_mentor_background.png"
+            alt=""
+            className="back"
+          />
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/kunal_sir.png"
+            alt=""
+            className="mamta"
+          />
+          <h2>Kunal</h2>
+          <p>SDE, Amazon</p>
+          <hr />
+          <p>
+            Mamta has a great passion for coding and motivates students to
+            pursue coding. Her mission is to use her knowledge and expertise to
+            help students get placed in their dream company.
+          </p>
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Amazon%2Bsam.png"
+            alt=""
+            className="center"
+          />
+        </div>
+        <div className="mentor-1">
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/mamta_mentor_background.png"
+            alt=""
+            className="back"
+          />
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/virali_vora.png"
+            alt=""
+            className="mamta"
+          />
+          <h2>Virali</h2>
+          <p>SDE, Google</p>
+          <hr />
+          <p>
+            Mamta has a great passion for coding and motivates students to
+            pursue coding. Her mission is to use her knowledge and expertise to
+            help students get placed in their dream company.
+          </p>
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Google_logo.png"
+            alt=""
+            className="center"
+          />
+        </div>
+        <div className="mentor-1">
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/mamta_mentor_background.png"
+            alt=""
+            className="back"
+          />
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/kushdeep_sir.png"
+            alt=""
+            className="mamta"
+          />
+          <h2>Kushdeep</h2>
+          <p>SDE, Sharechat</p>
+          <hr />
+          <p>
+            Mamta has a great passion for coding and motivates students to
+            pursue coding. Her mission is to use her knowledge and expertise to
+            help students get placed in their dream company.
+          </p>
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/sharechat.png"
+            alt=""
+            className="center"
+          />
+        </div>
+      </div>
 
+      {/* ------------------------------------------new section--------------------------------------- */}
+      <div className="college">
+        <div className="college-heading">
+          <div className="sub-heading">
+            <h1>Want to represent your college</h1>
+            <p>Join Prepbytes Campus Business Manager Internship Program</p>
+            <button>Join Now</button>
+          </div>
+        </div>
+        <img
+          src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/campus-business-manager/banner/CBM-Homepage-mobile.webp"
+          alt=""
+          className="college-hidden"
+        />
+        <img
+          src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/campus-business-manager/banner/CBM-WEB.webp "
+          alt=""
+          className="college-display"
+        />
+      </div>
+
+      {/* ---------------------------------------Mentors & Colleges--------------------------------------- */}
+
+      <div className="college">
+        {" "}
+        <h1>PrepBytes for Mentors & Colleges</h1>
+        <p>
+          "Join PrepBytes in the journey to reach more colleges and mentor more
+          students"
+        </p>
+      </div>
+
+      <div className="college-mentor">
+        <div className="inner-college-mentor">
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/be_a_part_of_mentors.png"
+            alt=""
+          />
+          <h3>Be a part of growing Mentor Community of PrepBytes</h3>
+          <p>
+            We look forward to industry experts who have a passion for teaching,
+            mentoring & making students future-ready
+          </p>
+          <button>Know More</button>
+        </div>
+        <div className="inner-college-mentor">
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/futuristic_algo.png"
+            alt=""
+          />
+          <h3>
+            Futuristic ALGO-driven Personalised learning module for your college
+          </h3>
+          <p>
+            Every Student is different, hence their Learning should also be. Get
+            in touch with to understand how PrepBytes can help students in your
+            college
+          </p>
+          <button>Know More</button>
+        </div>
+      </div>
+
+      {/* ----------------------------------------------------------------blogs--------------------------------------------------- */}
+      <div className="blogs-container">
+        <h1>Most Popular Blogs</h1>
+
+        <div className="blogs">
+
+     
+        <div className="inner-blogs">
+          <img
+            src="https://blog-images-upload.s3.ap-south-1.amazonaws.com/blog_top_50_interview_questions_answers.png"
+            alt=""
+            />
+          <p>Top 50 C Programming Interview Questions and Answers</p>
+          <h3>Read Now</h3>
+        </div>
+        <div className="inner-blogs">
+          <img
+            src="https://s3.ap-south-1.amazonaws.com/blog-images-upload/blog_vinit_story.png"
+            alt=""
+            />
+          <p>Motivational Story : He got his first placement success after being rejected by 22 companies</p>
+          <h3>Read Now</h3>
+        </div>
+        <div className="inner-blogs">
+          <img
+            src="https://blog-images-upload.s3.ap-south-1.amazonaws.com/blog_top_50_interview_questions_answers.png"
+            alt=""
+            />
+          <p>Lyrics from the famous track aptly describes the situation of every fresher when it comes to facing the interview</p>
+          <h3>Read Now</h3>
+        </div>
+            </div>
+      </div>
+
+      {/* ------------------------------------------form ------------------------------------------ */}
+      <Form/>
+      {/* ---------------------------------------footer---------------------------------------- */}
+      <Footer />
     </div>
   );
 }
