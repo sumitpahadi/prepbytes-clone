@@ -1,7 +1,6 @@
 import React from "react";
 import "../Style.css";
 import Slider from "../Slider/Slider";
-import Footer from "../Footer/Footer";
 import Form from "../Form/Fom";
 function Home() {
   return (
@@ -645,8 +644,8 @@ function Home() {
 
       {/* ------------------------------------------form ------------------------------------------ */}
       <Form/>
-      {/* ---------------------------------------footer---------------------------------------- */}
-      <Footer />
+      
+     
     </div>
   );
 }

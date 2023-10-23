@@ -10,141 +10,140 @@ function Navbar() {
   };
 
   return (
-  
-      <div className="navbar">
-        <div className="logo">
-          <img
-            src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/navbar/logoPrepBytes.svg"
-            alt="click here"
-          />
-        </div>
-        <div className="nav">
-          <div className="auth">
-            <button className="login">Login</button>
-            <button className="signup">Signup</button>
-          </div>
-
-          <div className="menubar">
-            <ul class="menu">
-              <li class="dropdown dropdown-toggle">
-                Study Material
-                <ul class="dropdown-content ">
-                  <li>
-                    <Link>Interview Notes</Link>
-                  </li>
-                  <li>
-                    <Link>Mock Test</Link>
-                  </li>
-                  <li>
-                    <Link>Video Tutorial</Link>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-            <ul>
-              <li class="dropdown dropdown-toggle">
-                Course and Program
-                <ul class="dropdown-content ">
-                  <li>
-                    <Link>Placement Program</Link>
-                  </li>
-                  <li>
-                    <Link>Master Competitive Programming</Link>
-                  </li>
-                  <li>
-                    <Link>Full Stack Program</Link>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ul>
-              <li>Practice Coding</li>
-            </ul>
-            <ul>
-              <li>Elevation Academy</li>
-            </ul>
-            <ul>
-              <li>CBM Internships</li>
-            </ul>
-            <ul>
-              <li class="dropdown dropdown-toggle">
-                Blog
-                <ul class="dropdown-content ">
-                  <li>
-                    <Link>HTML</Link>
-                  </li>
-                  <li>
-                    <Link> CSS</Link>
-                  </li>
-                  <li>
-                    <Link>Javascript</Link>
-                  </li>
-                  <li>
-                    <Link>React</Link>
-                  </li>
-                  <li>
-                    <Link>Node</Link>
-                  </li>
-                  <li>
-                    <Link>Mongodb</Link>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <ul>
-              <li>User</li>
-            </ul>
-          </div>
+    <div className="navbar">
+      <div className="logo">
+        <img
+          src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/navbar/logoPrepBytes.svg"
+          alt="click here"
+        />
+      </div>
+      <div className="nav">
+        <div className="auth">
+          <button className="login">Login</button>
+          <button className="signup">Signup</button>
         </div>
 
-        {/* ------------second nav--------------- */}
-        <button
-          className="navbar-toggler hamburger"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          onClick={toogle}
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        {menuOpen ? (
-          <div className="menubar2">
-            <ul>
-              <li>Placment Program</li>
-            </ul>
-            <ul>
-              <li>Master Competitive Programming</li>
-            </ul>
-            <ul>
-              <li>Full Stack Program</li>
-            </ul>
-            <ul>
+        <div className="menubar">
+          <ul class="menu">
+            <li class="dropdown dropdown-toggle">
+              Study Material
+              <ul class="dropdown-content ">
+                <li>
+                  <Link to={"mock_test"}>Mock Test</Link>
+                </li>
+                <li>
+                  <Link to={"/video"}>Video Tutorial</Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="dropdown dropdown-toggle">
+              Course and Program
+              <ul class="dropdown-content ">
+                <li>
+                  <Link to={"/master_comp"}>
+                    Master Competitive Programming
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/full_stack"}>Full Stack Program</Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>Practice Coding</li>
+          </ul>
+          <ul>
+            <Link
+              to={"/elevation"}
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <li>Elevation Academy</li>
-            </ul>
-            <ul>
-              <li>Practice code</li>
-            </ul>
-            <ul>
-              <li>Mock Tests</li>
-            </ul>
-            <ul>
-              <li>Video Tutorial</li>
-            </ul>
-            <ul>
-              <li>CBM Interships</li>
-            </ul>
-            <ul style={{ color: "#ff219f" }}>
-              <li>Login/signup</li>
-            </ul>
-          </div>
-        ) : null}
-     
+            </Link>
+          </ul>
+
+          <ul>
+            <li class="dropdown dropdown-toggle">
+              Blog
+              <ul class="dropdown-content ">
+                <li>
+                  <Link to={"html"}>HTML</Link>
+                </li>
+                <li>
+                  <Link to={"/css"}> CSS</Link>
+                </li>
+                <li>
+                  <Link to={"/javascript"}>Javascript</Link>
+                </li>
+                <li>
+                  <Link to={"/reactjs"}>React</Link>
+                </li>
+                <li>
+                  <Link to={"/node"}>Node</Link>
+                </li>
+                <li>
+                  <Link to={"/mongodb"}>Mongodb</Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>User</li>
+          </ul>
+        </div>
       </div>
 
+      {/* ------------second nav--------------- */}
+      <button
+        className="navbar-toggler hamburger"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        onClick={toogle}
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      {menuOpen ? (
+        <div className="menubar2">
+          <ul>
+            <Link to={"/master_comp"}  style={{ textDecoration: "none", color: "black" }}>
+              <li>Master Competitive Programming</li>
+            </Link>
+          </ul>
+          <ul>
+            <Link to={"/full_stack"}  style={{ textDecoration: "none", color: "black" }}>
+              <li>Full Stack Program</li>
+            </Link>
+          </ul>
+          <ul>
+            <Link to={"/elevation"}  style={{ textDecoration: "none", color: "black" }}>
+              <li>Elevation Academy</li>
+            </Link>
+          </ul>
+
+          <ul>
+            <Link to={"/mock_test"}  style={{ textDecoration: "none", color: "black" }}>
+              <li>Mock Tests</li>
+            </Link>
+          </ul>
+          <ul>
+            <Link to={"/video"}  style={{ textDecoration: "none", color: "black" }}>
+              <li>Video Tutorial</li>
+            </Link>
+          </ul>
+
+          <ul style={{ color: "#ff219f" }}>
+            <li>Login/signup</li>
+          </ul>
+        </div>
+      ) : null}
+    </div>
   );
 }
 
