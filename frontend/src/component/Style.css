@@ -1082,6 +1082,14 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: auto;
     width: 70%;
 }
+.college-heading .sub-heading h2 {
+  font-size: large;
+ 
+}
+.college-heading .sub-heading p {
+  font-size: small;
+
+}
 } 
 @media screen and (max-width: 768px) {
   .container {
