@@ -7,7 +7,7 @@ function Video() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/video")
+      .get("https://prepbytes.onrender.com/video")
       .then((response) => {
         setdata(response.data.data);
         console.log(response);

@@ -6,7 +6,7 @@ function Html() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/project")
+      .get("https://prepbytes.onrender.com/project")
       .then((response) => {
         setdata(response.data.data);
         console.log(response);

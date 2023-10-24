@@ -15,7 +15,6 @@ const mockdata=[
         participants:"1015",
         time:"120 min",
         img:"https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1663573579324-Aptitude%20Based%20Test%202%20icon.svg",
-
         price:1200,
         },
     {

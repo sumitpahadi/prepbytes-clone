@@ -7,7 +7,7 @@ function Mock_test() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/mock")
+      .get("https://prepbytes.onrender.com/mock")
       .then((response) => {
         setdata(response.data.mockdata);
         console.log(response);
