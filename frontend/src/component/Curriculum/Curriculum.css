@@ -1,0 +1,59 @@
+.Curriculum {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.inner-Curriculum {
+ 
+  display: flex;
+  gap: 21px;
+  flex-direction: column;
+}
+
+.inner-Curriculum .choice {
+  width: 400px;
+  box-shadow: 0px 0px 14px 4px grey;
+  display: flex;
+  cursor: pointer;
+  border-radius: 10px;
+
+ 
+  height: 50px;
+}
+
+.inner-Curriculum .choice img {
+  width: 30px;
+  margin-right: 20px;
+  height: 30px;
+}
+.inner-Curriculum .curculam-img {
+  width: 300px;
+}
+
+.inner-Curriculum .curculam-img img {
+  width: 100%;
+}
+.inner-Curriculum2 {
+  width: 400px;
+  border-right: 5px solid #00a6eb;
+ 
+}
+
+.inner-Curriculum2  ul li::marker {
+    content: '●';
+    color: #00a6eb; 
+    font-size: 1.1em;
+    margin-right: 19px; 
+  }
+.inner-Curriculum2 ul {
+    
+  display: flex;
+  flex-direction: column;
+}
+.inner-Curriculum2 ul li{
+    
+  padding: 5px;
+}

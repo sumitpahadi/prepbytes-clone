@@ -43,7 +43,7 @@
   display: block;
   margin: auto;
   width: 70%;
-margin-bottom: 20px;
+  margin-bottom: 20px;
   border: none; /* Remove the default border */
 }
 
@@ -76,4 +76,428 @@ margin-bottom: 20px;
 }
 .container-for-video .inner-video p {
   text-align: center;
+}
+
+/* --------------------------------------------mock test------------------------------------------------- */
+
+.mock-container {
+  padding: 60px;
+  color: white;
+  background: transparent linear-gradient(180deg, #3969ad, #1d3557) 0 0
+    no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
+}
+.mock-container p {
+  width: 50%;
+  font-size: 16px;
+}
+
+.inner-feature {
+  display: flex;
+  justify-content: space-evenly;
+}
+.inner-feature hr {
+  width: 40%;
+  height: 5px;
+  background-color: blue;
+}
+.inner-feature h2 {
+  text-align: center;
+}
+.mock-feature .mock-head {
+  padding: 30px;
+}
+.container-for-mock {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  background: #f8f7fd;
+  padding: 30px;
+}
+
+.container-for-mock .inner-mock {
+  width: 300px;
+  border-radius: 10px;
+
+  height: 370px;
+  background: transparent linear-gradient(180deg, #e0ebf9, #fff 54%, #fff) 0 0
+    no-repeat padding-box;
+}
+.container-for-mock .inner-mock img {
+  display: block;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+}
+.container-for-mock .inner-mock h4 {
+  text-align: center;
+  color: #3969ad;
+}
+.container-for-mock .inner-mock button {
+  background-color: #00a5ec;
+  border: 2px solid #00a5ec;
+  border-radius: 5px;
+  color: #fff;
+  height: 40px;
+  width: 100px;
+  display: block;
+  margin: auto;
+}
+.container-for-mock .inner-mock .inner-test p {
+  text-align: center;
+  width: 30%;
+  color: #707070;
+
+  height: 42px;
+  box-shadow: 6px 0px 7px -4px grey;
+}
+
+.container-for-mock .inner-mock .inner-test {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+/* -------------------------------project pages---------------------- */
+
+.inner-project {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 100%;
+  padding-top: 48px;
+}
+.project-container {
+  background: #f8f7fd;
+}
+.inner-project img {
+  width: 50%;
+  display: block;
+  box-shadow: 0px 0px 14px 4px grey;
+  margin: auto;
+}
+.inner-project-heading {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-align: center;
+  margin: auto;
+}
+
+.inner-project-heading p {
+  font-size: 18px;
+}
+.inner-project-heading h1 {
+  text-decoration: underline;
+}
+
+.topics {
+  width: 60%;
+  display: block;
+  margin: auto;
+
+  box-shadow: 0px 0px 14px 4px grey;
+}
+
+.heading-topics h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+.topics ol li i {
+  color: #1777b7;
+  padding-right: 10px;
+}
+.topics ol {
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  justify-content: left;
+  display: flex;
+}
+.topics ol li {
+  width: 200px;
+}
+
+.detail-explain ol {
+  list-style: none;
+}
+.detail-explain ol li {
+  padding: 5px;
+}
+.detail-explain {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.inner-part hr {
+  height: 4px;
+  margin-top: 50px;
+  box-shadow: 0px 0px 14px 4px grey;
+  background-color: black;
+}
+@media screen and (max-width: 1000px) {
+  .inner-project img {
+    width: 80%;
+  }
+}
+
+/* --------------------------------------------------------------------------------master competitive programming------------------------ */
+
+.master-comp {
+  display: flex;
+  padding-left: 50px;
+  flex-wrap: wrap-reverse;
+  gap: 30px;
+  justify-content: center;
+}
+
+.master-comp .heading-para {
+  width: 500px;
+}
+.master-comp .heading-para h1 {
+  color: #00a5ec;
+  font-weight: bold;
+}
+.master-comp .heading-para p {
+  font-size: 20px;
+}
+
+.master-comp .heading-para button {
+  background-color: #00a5ec;
+  border: 2px solid #00a5ec;
+  border-radius: 5px;
+  color: #fff;
+  height: 40px;
+  width: 130px;
+}
+.master-comp .company-logo {
+  width: 500px;
+}
+
+.master-comp .company-logo img {
+  width: 100%;
+}
+
+/* ------layers */
+
+.layers {
+  display: flex;
+  width: 100%;
+
+  margin: auto;
+  gap: 10px;
+  padding: 80px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.layers .layer1 img {
+  width: 50px;
+  height: 50px;
+}
+.layers .layer3 {
+  width: 450px;
+
+  border-bottom: 4px solid #df3897;
+  margin-right: 0.75rem;
+
+  border-right: 4px solid #df3897;
+}
+.layers .layer4 {
+  width: 450px;
+  border-bottom: 4px solid #0398d3;
+  border-right: 4px solid #0398d3;
+  margin-right: 0.75rem;
+}
+.layers .layer5 {
+  width: 450px;
+
+  border-bottom: 4px solid #7914a3;
+  border-right: 4px solid #7914a3;
+  margin-right: 0.75rem;
+}
+.layers .layer6 {
+  width: 450px;
+
+  border-bottom: 4px solid #7914a3;
+  border-right: 4px solid #7914a3;
+  margin-right: 0.75rem;
+}
+/* ---------------------------------leading mentors */
+.leading-mentors h2 {
+  width: 100%;
+  text-align: center;
+  color: #151414;
+  margin-bottom: 1rem;
+  font: normal normal 500 1.75rem/2rem Inter;
+}
+.leading-mentors h3 {
+  font: normal normal 400 1.4rem/2rem Inter;
+  color: #151414;
+  text-align: center;
+  margin: 1rem 0rem;
+  margin-bottom: 2rem;
+  margin-bottom: 90px;
+}
+
+.founder {
+  display: flex;
+  gap: 10px;
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 6px rgba(162, 161, 161, 0.1607843137);
+  border-radius: 10px;
+}
+
+.inner-leading-mentors {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.leading-mentors .founder .imgofmentor {
+  width: 100px;
+  height: 100px;
+}
+.leading-mentors .founder .inner-founder img {
+  width: 150px;
+  height: 40px;
+}
+
+/* ---------------------------------------------------------detail of circulam */
+
+.list-of-program .inner-program img {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+.inner-inner-program h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.list-of-program ol {
+  list-style: none;
+}
+.list-of-program {
+  width: 400px;
+}
+.inner-program {
+  display: flex;
+}
+.list-img {
+  width: 300px;
+}
+.list-img img {
+  width: 100%;
+}
+.program1 {
+  display: flex;
+  gap: 10px;
+
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .list-img {
+    display: none;
+  }
+  .program1 {
+    flex-wrap: wrap;
+  }
+  .inner-program1 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+/* -------------------------------------------------new section -------------------------------------------- */
+.hori {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+.hori hr {
+  height: 4px;
+  background-color: black;
+}
+.student-enrolled h1 {
+  color: #00a6eb;
+  font-weight: bold;
+}
+
+.student-enrolled {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* --------------------------------------coding context--------------------------------------------------- */
+.coding-context {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+.coding-context h1 {
+  text-align: center;
+  font-weight: 600;
+}
+.coding-context img {
+  width: 100%;
+}
+
+/* ---------------------------------new section for batch------------------------------------------- */
+
+.batch {
+  display: flex;
+  width: 80%;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  margin: auto;
+}
+
+.select {
+  padding-top: 20px;
+}
+
+.enrllment {
+  background-color: #00a6eb;
+  text-align: center;
+  color: white;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.enrollment2 {
+  text-align: center;
+  border-bottom: 3px solid #00a6eb;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.fees button {
+  background-color: #00a6eb;
+  text-align: center;
+  color: white;
+  width: 200px;
+  height: 40px;
+  border: 3px solid #00a6eb;
+
+  border-radius: 10px;
+}
+
+/* -------------------------------------------end dection------------------------------------ */
+.layess {
+  width: 85%;
+  box-shadow: 0px 0px 14px 4px grey;
+  margin-bottom: 10px;
 }
