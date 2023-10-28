@@ -38,8 +38,8 @@ function Toggle() {
           <h1>Program Syllabus & Projects</h1>
           <p>
             We have reverse engineered our syllabus by talking to the best
-            companies and understanding <br /> what skills the industry needs the most
-            right now.
+            companies and understanding <br /> what skills the industry needs
+            the most right now.
           </p>
         </div>
         <div className="inner-heading-project2">
@@ -75,7 +75,7 @@ function Toggle() {
             </p>
           </div>
 
-          <div className={`collapse1 ${html ? 'open' : ''}`}>
+          <div className={`collapse1 ${html ? "open" : ""}`}>
             <div className="card card-body">
               {html && (
                 <div className="orderlist">
@@ -85,84 +85,84 @@ function Toggle() {
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      How websites work
+                      <p>How websites work</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      HTML Introduction
+                   <p>   HTML Introduction</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      HTML Tags{" "}
+                      <p>HTML Tags</p>{" "}
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Lists, Forms, Tables
+                     <p> Lists, Forms, Tables</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      HTML Divs
+                      <p>HTML Divs</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Inline vs Internal vs External styling
+                     <p> Inline vs Internal vs External styling</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      CSS Font Styling, background, margin, padding
+                      <p>CSS Font Styling, background, margin, padding</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      FontAwesome
+                    <p>  FontAwesome</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Styling button
+                    <p>  Styling button</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Bootstrap containers
+                      <p>Bootstrap containers</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Bootstrap Alerts, Buttons
+                      <p>Bootstrap Alerts, Buttons</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Bootstrap Corousel
+                      <p>Bootstrap Corousel</p>
                     </li>
                   </ol>
                 </div>
@@ -176,77 +176,77 @@ function Toggle() {
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Web Development Overview - Advantages
+                    <p>  Web Development Overview - Advantages</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Structure of Webpage
+                     <p> Structure of Webpage</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Texts, Images, Videos
+                    <p>  Texts, Images, Videos</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Links, Anchor tags
+                      <p>Links, Anchor tags</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      CSS Introduction
+                     <p> CSS Introduction</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      CSS Display
+                     <p> CSS Display</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Styling Lists, Tables, Forms
+                     <p> Styling Lists, Tables, Forms</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Transitionals, Transformations, Animations
+                     <p> Transitionals, Transformations, Animations</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Tool tip, Box Sizing, Flex, Grid
+                     <p> Tool tip, Box Sizing, Flex, Grid</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Bootstrap Tables,Images, Colors
+                      <p>Bootstrap Tables,Images, Colors</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Bootstrap Spinners, Cards, Pagination, Drop Down
+                      <p>Bootstrap Spinners, Cards, Pagination, Drop Down</p>
                     </li>
                   </ol>
                 </div>
@@ -282,7 +282,7 @@ function Toggle() {
             </p>
           </div>
 
-          <div className={`collapse2 ${js ? 'open' : ''}`}>
+          <div className={`collapse2 ${js ? "open" : ""}`}>
             <div className="card card-body">
               {js && (
                 <div className="orderlist">
@@ -292,63 +292,57 @@ function Toggle() {
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Introduction to Javascript
+                     <p> Introduction to Javascript</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Strings and Numbers
+                     <p> Strings and Numbers</p>
+                    </li>
+                
+                    <li>
+                      <i
+                        class="fa-solid fa-greater-than"
+                        style={{ color: "orange", paddingRight: "9px" }}
+                      ></i>
+                      <p>Functions</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      HTML Tags{" "}
+                     <p> Data Structures - List, Stack, Queues, Maps</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Functions
+                     <p> Understanding and working with DOM</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Data Structures - List, Stack, Queues, Maps
+                      <p>Prototypes</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Understanding and working with DOM
+                      <p>Browser Local Storage</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Prototypes
-                    </li>
-                    <li>
-                      <i
-                        class="fa-solid fa-greater-than"
-                        style={{ color: "orange", paddingRight: "9px" }}
-                      ></i>
-                      Browser Local Storage
-                    </li>
-                    <li>
-                      <i
-                        class="fa-solid fa-greater-than"
-                        style={{ color: "orange", paddingRight: "9px" }}
-                      ></i>
-                      Eventloop in Javascrip
+                      <p>Eventloop in Javascrip</p>
                     </li>
                   </ol>
                 </div>
@@ -362,56 +356,56 @@ function Toggle() {
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Variables, scoping, Data type
+                     <p> Variables, scoping, Data type</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Operators and loops
+                  <p>    Operators and loops</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Arrays and Objects
+                      <p>Arrays and Objects</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Hashing
+                      <p>Hashing</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Developer tools in Browsers
+                     <p> Developer tools in Browsers</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Closures
+                      <p>Closures</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Jquery, Ajax
+                     <p> Jquery, Ajax</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      ES5 vs ES6 vs ES7
+                     <p> ES5 vs ES6 vs ES7</p>
                     </li>
                   </ol>
                 </div>
@@ -447,7 +441,7 @@ function Toggle() {
             </p>
           </div>
 
-          <div className={`collapse3 ${react ? 'open' : ''}`}>
+          <div className={`collapse3 ${react ? "open" : ""}`}>
             <div className="card card-body">
               {react && (
                 <div className="orderlist">
@@ -457,63 +451,63 @@ function Toggle() {
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      React Intro
+                     <p> React Intro</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Create an app using create-react-app
+                     <p> Create an app using create-react-app</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      React Lifecycle{" "}
+                     <p> React Lifecycle</p>{" "}
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Event handling, props
+                      <p>Event handling, props</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Routes
+                      <p>Routes</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Pure Components
+                      <p>Pure Components</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Controlled vs Uncontrolled components
+                      <p>Controlled vs Uncontrolled components</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Babel, Webpack
+                      <p>Babel, Webpack</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      SASS overview
+                      <p>SASS overview</p>
                     </li>
                   </ol>
                 </div>
@@ -527,63 +521,63 @@ function Toggle() {
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Node installation
+                      <p>Node installation</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Understanding basics of react app
+                      <p>Understanding basics of react app</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Understanding virtual DOMS , Single page apps
+                     <p> Understanding virtual DOMS , Single page apps</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      States, class components vs functional components
+                      <p>States, class components vs functional components</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Building forms in React
+                     <p> Building forms in React</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Conditional Rendering
+                     <p> Conditional Rendering</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      High order components
+                   <p>   High order components</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Redux
+                      <p>Redux</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Axios, Creating a mock server
+                     <p> Axios, Creating a mock server</p>
                     </li>
                   </ol>
                 </div>
@@ -618,7 +612,7 @@ function Toggle() {
             </p>
           </div>
 
-          <div className={`collapse4 ${node ? 'open' : ''}`}>
+          <div className={`collapse4 ${node ? "open" : ""}`}>
             <div className="card card-body">
               {node && (
                 <div className="orderlist">
@@ -628,35 +622,35 @@ function Toggle() {
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Creating a Simple Server
+                      <p>Creating a Simple Server</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Routing
+                      <p>Routing</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Intergrate Frontend and Backend{" "}
+                      <p>Intergrate Frontend and Backend</p>{" "}
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Express Middleware
+                    <p>  Express Middleware</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      JWT Token, Passport.js
+                     <p> JWT Token, Passport.js</p>
                     </li>
                   </ol>
                 </div>
@@ -670,35 +664,35 @@ function Toggle() {
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Response types - HTML, JSON
+                      <p>Response types - HTML, JSON</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Express Introduction
+                    <p>  Express Introduction</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Express Params and Query String
+                  <p>    Express Params and Query String</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      API Authentication
+                     <p> API Authentication</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Socket Programming
+                     <p> Socket Programming</p>
                     </li>
                   </ol>
                 </div>
@@ -733,7 +727,7 @@ function Toggle() {
             </p>
           </div>
 
-          <div className={`collapse5 ${db ? 'open' : ''}`}>
+          <div className={`collapse5 ${db ? "open" : ""}`}>
             <div className="card card-body">
               {db && (
                 <div className="orderlist">
@@ -743,21 +737,21 @@ function Toggle() {
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      SQL vs NOSQL
+                      <p>SQL vs NOSQL</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Installing MongoDB
+                      <p>Installing MongoDB</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Deleting and updating Data{" "}
+                      <p>Deleting and updating Data</p>{" "}
                     </li>
                   </ol>
                 </div>
@@ -771,21 +765,21 @@ function Toggle() {
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      MongoDB overview
+                     <p> MongoDB overview</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Connecting and Inserting Data
+                     <p> Connecting and Inserting Data</p>
                     </li>
                     <li>
                       <i
                         class="fa-solid fa-greater-than"
                         style={{ color: "orange", paddingRight: "9px" }}
                       ></i>
-                      Understanding CRUD operations
+                     <p> Understanding CRUD operations</p>
                     </li>
                   </ol>
                 </div>
@@ -816,7 +810,7 @@ function Toggle() {
           </p>
         </div>
 
-        <div className={`collapse6 ${code ? 'open' : ''}`}>
+        <div className={`collapse6 ${code ? "open" : ""}`}>
           <div className="card card-body">
             {code && (
               <div className="orderlist">
@@ -826,28 +820,28 @@ function Toggle() {
                       class="fa-solid fa-greater-than"
                       style={{ color: "orange", paddingRight: "9px" }}
                     ></i>
-                    Tools for Code review
+                    <p>Tools for Code review</p>
                   </li>
                   <li>
                     <i
                       class="fa-solid fa-greater-than"
                       style={{ color: "orange", paddingRight: "9px" }}
                     ></i>
-                    Understanding Firebase
+                    <p>Understanding Firebase</p>
                   </li>
                   <li>
                     <i
                       class="fa-solid fa-greater-than"
                       style={{ color: "orange", paddingRight: "9px" }}
                     ></i>
-                    Deploy using Netlify and Github{" "}
+                    <p>Deploy using Netlify and Github</p>{" "}
                   </li>
                   <li>
                     <i
                       class="fa-solid fa-greater-than"
                       style={{ color: "orange", paddingRight: "9px" }}
                     ></i>
-                    Deploy all the projects
+                   <p> Deploy all the projects</p>
                   </li>
                 </ol>
               </div>
@@ -861,21 +855,21 @@ function Toggle() {
                       class="fa-solid fa-greater-than"
                       style={{ color: "orange", paddingRight: "9px" }}
                     ></i>
-                    Understand Review Board
+                  <p>  Understand Review Board</p>
                   </li>
                   <li>
                     <i
                       class="fa-solid fa-greater-than"
                       style={{ color: "orange", paddingRight: "9px" }}
                     ></i>
-                    Github
+                    <p>Github</p>
                   </li>
                   <li>
                     <i
                       class="fa-solid fa-greater-than"
                       style={{ color: "orange", paddingRight: "9px" }}
                     ></i>
-                    Get code review by Software Developers
+                  <p>  Get code review by Software Developers</p>
                   </li>
                 </ol>
               </div>
@@ -912,7 +906,7 @@ function Toggle() {
             </p>
           </div>
 
-          <div cclassName={`collapse7 ${project ? 'open' : ''}`}>
+          <div cclassName={`collapse7 ${project ? "open" : ""}`}>
             <div className="card card-body">
               {project && (
                 <div className="porject-cart">

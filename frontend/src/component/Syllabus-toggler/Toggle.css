@@ -24,10 +24,10 @@
 
 .card-body {
   display: flex;
-  flex-wrap: wrap;
+ 
   justify-content: space-evenly;
   flex-direction: row;
-  gap: 20px;
+ 
 }
 .orderlist ol {
   list-style: none;
@@ -36,11 +36,15 @@
   list-style: none;
 }
 
+.orderlis2  {
+  display: block;
+  margin: auto;
+}
 .porject-cart {
   display: flex;
   gap: 20px;
 
-  flex-wrap: wrap;
+  
   justify-content: space-between;
 }
 .porject-cart .project1 {
@@ -89,6 +93,27 @@ font-size: 18px;
 }
 
 
+ol li {
+  display: flex;
+}
+
+@media screen and (max-width:880px) {
+  .orderlist{
+    width: 100%;
+  }
+  .orderlis2{
+    width: 100%;
+  }
+  .card-body{
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .porject-cart {
+    display: block;
+  
+  }
+}
 
 /* --------------------------------transition */
 
