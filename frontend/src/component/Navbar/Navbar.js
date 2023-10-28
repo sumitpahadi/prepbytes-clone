@@ -5,8 +5,8 @@ import "../Style.css";
 import { Link } from "react-router-dom";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const toogle = () => {
-    setMenuOpen(!menuOpen);
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
@@ -29,10 +29,10 @@ function Navbar() {
               Study Material
               <ul class="dropdown-content ">
                 <li>
-                  <Link to={"mock_test"}>Mock Test</Link>
+                  <Link to={"mock_test"} onClick={closeMenu}>Mock Test</Link>
                 </li>
                 <li>
-                  <Link to={"/video"}>Video Tutorial</Link>
+                  <Link to={"/video"} onClick={closeMenu}>Video Tutorial</Link>
                 </li>
               </ul>
             </li>
@@ -43,49 +43,47 @@ function Navbar() {
               Course and Program
               <ul class="dropdown-content ">
                 <li>
-                  <Link to={"/master_comp"}>
+                  <Link to={"/master_comp"} onClick={closeMenu}>
                     Master Competitive Programming
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/full_stack"}>Full Stack Program</Link>
+                  <Link to={"/full_stack"} onClick={closeMenu}>Full Stack Program</Link>
                 </li>
               </ul>
             </li>
           </ul>
-          <ul>
-            <li>Practice Coding</li>
-          </ul>
+       
           <ul>
             <Link
               to={"/elevation"}
               style={{ textDecoration: "none", color: "black" }}
-            >
+              onClick={closeMenu}>
               <li>Elevation Academy</li>
             </Link>
           </ul>
 
           <ul>
             <li class="dropdown dropdown-toggle">
-              Blog
+              Project
               <ul class="dropdown-content ">
                 <li>
-                  <Link to={"html"}>HTML</Link>
+                  <Link to={"html"} onClick={closeMenu}>HTML</Link>
                 </li>
                 <li>
-                  <Link to={"/css"}> CSS</Link>
+                  <Link to={"/css"} onClick={closeMenu}> CSS</Link>
                 </li>
                 <li>
-                  <Link to={"/javascript"}>Javascript</Link>
+                  <Link to={"/javascript"} onClick={closeMenu}>Javascript</Link>
                 </li>
                 <li>
-                  <Link to={"/reactjs"}>React</Link>
+                  <Link to={"/reactjs"} onClick={closeMenu}>React</Link>
                 </li>
                 <li>
-                  <Link to={"/node"}>Node</Link>
+                  <Link to={"/node"} onClick={closeMenu}>Node</Link>
                 </li>
                 <li>
-                  <Link to={"/mongodb"}>Mongodb</Link>
+                  <Link to={"/mongodb"} onClick={closeMenu}>Mongodb</Link>
                 </li>
               </ul>
             </li>
@@ -105,7 +103,7 @@ function Navbar() {
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
-        onClick={toogle}
+        onClick={() => setMenuOpen(!menuOpen)} 
       >
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -113,28 +111,28 @@ function Navbar() {
         <div className="menubar2">
           <ul>
             <Link to={"/master_comp"}  style={{ textDecoration: "none", color: "black" }}>
-              <li>Master Competitive Programming</li>
+              <li onClick={closeMenu}>Master Competitive Programming</li>
             </Link>
           </ul>
           <ul>
             <Link to={"/full_stack"}  style={{ textDecoration: "none", color: "black" }}>
-              <li>Full Stack Program</li>
+              <li onClick={closeMenu}>Full Stack Program</li>
             </Link>
           </ul>
           <ul>
             <Link to={"/elevation"}  style={{ textDecoration: "none", color: "black" }}>
-              <li>Elevation Academy</li>
+              <li onClick={closeMenu}>Elevation Academy</li>
             </Link>
           </ul>
 
           <ul>
             <Link to={"/mock_test"}  style={{ textDecoration: "none", color: "black" }}>
-              <li>Mock Tests</li>
+              <li onClick={closeMenu}>Mock Tests</li>
             </Link>
           </ul>
           <ul>
             <Link to={"/video"}  style={{ textDecoration: "none", color: "black" }}>
-              <li>Video Tutorial</li>
+              <li onClick={closeMenu}>Video Tutorial</li>
             </Link>
           </ul>
 

@@ -30,7 +30,7 @@ function Javascript() {
                 </div>
               </div>
               <div className="heading-topics">
-                <h2>Most Important Topics of HTML</h2>
+                <h2>Most Important Topics of Javascript</h2>
               </div>
               <div className="topics">
                 <ol>

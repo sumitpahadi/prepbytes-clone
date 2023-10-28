@@ -196,7 +196,7 @@ ul {
 
   background-color: white;
 
-  box-shadow: 0px -1px 14px 4px grey;
+  box-shadow: 0px -1px 7px 4px grey;
   border-radius: 10px;
 
   position: absolute;
@@ -526,6 +526,7 @@ ul {
   display: flex;
   margin-bottom: 100px;
   justify-content: center;
+  padding-top: 48px;
   flex-wrap: wrap;
   gap: 60px;
 }
@@ -533,7 +534,7 @@ ul {
 .mentor-1 {
   border-radius: 10px;
   position: relative;
-  box-shadow: 0px -1px 14px 4px grey;
+  box-shadow:-1px -1px 9px 3px grey;
   width: 350px;
 }
 .mentor-1 .back {
@@ -625,7 +626,7 @@ ul {
   background-color: white;
   position: relative;
   height: 450px;
-  box-shadow: 0px -1px 14px 4px grey;
+  box-shadow: 0px -1px 14px -1px grey;
   transition: transform 0.2s; /* Add a transition for smooth movement */
 }
 

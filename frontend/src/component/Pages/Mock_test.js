@@ -4,14 +4,23 @@ import "./Page.css";
 import { useEffect, useState } from "react";
 function Mock_test() {
   const [apidata, setdata] = useState([]);
+  const [topic, settopic] = useState([]);
+  console.log("topic", topic);
 
   useEffect(() => {
     axios
       .get("https://prepbytes.onrender.com/mock")
       .then((response) => {
         setdata(response.data.mockdata);
-        console.log(response);
-        console.log(response.data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+  useEffect(() => {
+    axios
+      .get("https://prepbytes.onrender.com/topic")
+      .then((response) => {
+        settopic(response.data.data);
+        console.log("response of topics ", response);
       })
       .catch((error) => console.log(error));
   }, []);
@@ -68,6 +77,28 @@ function Mock_test() {
                   Time
                 </p>
               </div>
+              <button>Test Know</button>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="mock-feature">
+        <div className="mock-head">
+          <h2>Practice Test</h2>
+        </div>
+        <div className="inner-feature">
+          <hr />
+          <h2>TOPIC WISE</h2>
+          <hr />
+        </div>
+      </div>
+      <div className="container-for-mock">
+        {topic.map((item, index) => {
+          return (
+            <div className="inner-mock1" key={index}>
+              <img src={item.img} alt="" />
+              <h4>{item.name}</h4>
               <button>Test Know</button>
             </div>
           );
