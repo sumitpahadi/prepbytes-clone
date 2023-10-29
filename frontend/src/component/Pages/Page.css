@@ -95,6 +95,10 @@
   width: 50%;
   font-size: 16px;
 }
+.mock-container h2{
+  margin-top: 88px;
+
+}
 
 .inner-feature {
   display: flex;

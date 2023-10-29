@@ -35,8 +35,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
     payment_method_types: ["card"],
     line_items: lineItems,
     mode: "payment",
-    success_url: "https://ecommerse-eight.vercel.app/sucess",
-    cancel_url: "https://ecommerse-eight.vercel.app/cancel",
+    success_url: "https://prepbytes-clone.vercel.app/dashboard",
+    cancel_url: "https://prepbytes-clone.vercel.app/cancel",
 
   });
   res.json({id:session.id})

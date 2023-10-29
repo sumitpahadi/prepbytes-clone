@@ -10,16 +10,24 @@ import Node from "../Pages/Node";
 import Reactjs from "../Pages/Reactjs";
 import Video from "../Pages/Video";
 import Home from "../Pages/Home";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes,useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import Signup from "../Login and signup/Signup";
 import Login from "../Login and signup/Login";
+import Cancel from "../Dashboard/Cancel";
+import Dashboard from "../Dashboard/Dashboard"
 
 function Routers() {
+  const navigate = useNavigate();
+
+  const shouldShowNavbarAndFooter = () => {
+    const currentPath = window.location.pathname;
+    return !(currentPath === "/dashboard" || currentPath === "/cancel");
+  };
   return (
     <div>
-        <Navbar/>
+         {shouldShowNavbarAndFooter() && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/html" element={<Html />} />
@@ -35,8 +43,11 @@ function Routers() {
         <Route path="/node" element={<Node />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/cancel" element={<Cancel />} />
       </Routes>
-      <Footer/>
+     
+      {shouldShowNavbarAndFooter() && <Footer />}
     </div>
   );
 }
