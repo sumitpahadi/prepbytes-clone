@@ -1,11 +1,93 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+
 import "./Page.css";
 import Curriculum from "../Curriculum/Curriculum";
 import Slider from "../Multi layer silder/Slider";
-
+import { addtocart } from "../Slice/Createslice";
+import { loadStripe } from "@stripe/stripe-js";
+import { useSelector, useDispatch } from "react-redux";
 function Master_comp() {
+  const dispatch = useDispatch();
+  const selelct = useSelector((state) => state.cart.data);
+
+  console.log(selelct);
+
+  const [verified, setVerified] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    console.log("Token:", token);
+
+    axios
+      .get("http://localhost:4000/dashboard", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((response) => {
+        console.log(response.data);
+        setVerified(true);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  const makepayment = async () => {
+    const stripe = await loadStripe(
+      "pk_test_51O1PDfSDn9Jvh8C8qUZncvrWSZahMESF3FeF4obkKuNq1rplszqkwgM38wkPeSTU2BAqUI1IoMD23sszROBAeWoU00ZTXXLMoJ"
+    );
+
+    const body = {
+      products: [
+        {
+          id: 22,
+          name: "Master Competittive Program",
+          price: 10000,
+          quantity: 1,
+        },
+      ],
+    };
+    const headers = {
+      "Content-Type": "application/json",
+    };
+    const response = await fetch(
+      "https://prepbytes.onrender.com/api/create-checkout-session",
+      {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify(body),
+      }
+    );
+    const session = await response.json();
+    const result = stripe.redirectToCheckout({
+      sessionId: session.id,
+    });
+    if (result.error) {
+      console.log(result.error);
+    }
+  };
+
+  const handleClick = (item) => {
+    const userid = localStorage.getItem("userid");
+    console.log(userid);
+
+    if (verified) {
+      dispatch(
+        addtocart({
+          id: 22,
+          name: "Master Competittive Program",
+          price: 10000,
+          quantity: 1,
+        })
+      );
+    }
+  };
+
   return (
-    <div style={{ backgroundColor: "#f7f7ff" }}>
+    <div>
       <div className="master-comp">
         <div className="heading-para">
           <h1>MASTER COMPETITIVE PROGRAMMING</h1>
@@ -13,7 +95,26 @@ function Master_comp() {
             Master Competitive Programming Fom Zero And Become A Top-Rated Coder
             <b> Under The Guidance Of Top Competitive Programmers</b>
           </p>
-          <button>Enrol Now</button>
+
+          {verified ? (
+            <button
+              onClick={() => {
+                makepayment();
+                handleClick();
+              }}
+            >
+              Enroll Now
+            </button>
+          ) : (
+            <button>
+              <Link
+                to={"/login"}
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Register
+              </Link>
+            </button>
+          )}
         </div>
         <div className="company-logo">
           <img

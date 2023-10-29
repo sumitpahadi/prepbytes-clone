@@ -7,11 +7,9 @@ const saltnumber = 10;
 
 const register = async (req, res) => {
   try {
-    const { username, email, password, confirmpassword } = req.body;
+    const { username, email, password, collegename,passingyear} = req.body;
 
-    if (password !== confirmpassword) {
-      return res.status(200).send({ msg: "Passwords do not match" });
-    }
+   
 
     // Check if the email is already in use
     const existingUser = await userdata.findOne({ email });
@@ -21,14 +19,15 @@ const register = async (req, res) => {
 
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, saltnumber);
-    const hashconfirmpass = await bcrypt.hash(confirmpassword, saltnumber);
+
 
     // Create the user
     const user = await userdata.create({
       username,
       email,
       password: hashedPassword,
-      confirmpassword: hashconfirmpass, // Include the confirmpassword field
+     collegename,
+     passingyear
     });
 
     console.log(user);

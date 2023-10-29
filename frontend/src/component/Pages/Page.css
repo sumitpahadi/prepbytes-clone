@@ -20,9 +20,12 @@
 }
 .video_img img {
   width: 100%;
+  padding-top: 100px;
 }
 .video .video-heading {
   padding: 40px;
+  padding-top: 150px;
+
   width: 500px;
 }
 
@@ -300,6 +303,7 @@
 .master-comp {
   display: flex;
   padding-left: 50px;
+  padding-top: 120px;
   flex-wrap: wrap-reverse;
   gap: 30px;
   justify-content: center;
@@ -506,11 +510,11 @@
 .batch {
   display: flex;
   width: 80%;
+  gap: 62px;
   padding: 20px;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-
-  margin: auto;
+  justify-content: center;
+  margin: auto
 }
 
 .select {
@@ -546,7 +550,11 @@
 /* -------------------------------------------end dection------------------------------------ */
 .layess {
   width: 85%;
-  box-shadow: 0px 0px 14px 4px grey;
+ border-top:2px solid gray ;
+ border-bottom:2px solid rgb(239, 231, 231) ;
+ border-left:2px solid rgb(239, 231, 231) ;
+ border-right:2px solid rgb(239, 231, 231) ;
+  
   margin-bottom: 10px;
 }
 
@@ -566,7 +574,12 @@
 .full-stack .inner-full-stack {
   color: white;
   padding: 10px;
+  padding-top: 148px;
   width: 600px;
+}
+
+.inner-full-stack-2{
+  padding-top: 150px;
 }
 
 .inner-full-stack img {
@@ -625,6 +638,9 @@
 
 .full-stack-selection .inner-select-batch {
   width: 250px;
+}
+.tryfree{
+  display: flex;
 }
 
 .full-stack-selection .inner-select-batch .radio {
@@ -716,130 +732,6 @@
 }
 
 /* {------------------------------------------------------------------Batch Commencement--------------------------------------------} */
-
-.journey {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  justify-content: center;
-}
-
-.jouney1 {
-  width: 400px;
-  display: flex;
-  flex-wrap: wrap;
-
-  flex-direction: column;
-  gap: 40px;
-}
-
-.jouney1 .inner-jouney {
-  height: 70px;
-
-  padding: 10px;
-
-  text-align: center;
-}
-.jouney1 .inner-jouney:first-child {
-  background: transparent
-    linear-gradient(
-      89deg,
-      rgba(45, 111, 162, 0.8862745098039215),
-      rgba(2, 9, 14, 0.9294117647058824)
-    )
-    0 0 no-repeat padding-box;
-  color: #fff;
-  border-radius: 6px;
-}
-
-.jouney1 .inner-jouney {
-  border-radius: 6px;
-  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.15);
-  background: linear-gradient(
-    134deg,
-    rgba(48, 35, 174, 0.1),
-    rgba(200, 109, 215, 0.1)
-  );
-  color: rgba(10, 45, 71, 0.9294117647058824);
-}
-.jouney2 {
-  display: flex;
-  width: 700px;
-
-  flex-direction: column;
-}
-
-.list-inner-jouney-2 {
-  width: 300px;
-  margin: 0px;
-}
-.jouney2 img {
-  width: 70%;
-  display: block;
-  margin: auto;
-}
-
-.inner-jouney-2 {
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-
-  justify-content: center;
-}
-
-.inner-journey {
-  position: relative;
-}
-
-.inner-journey p {
-  margin-left: 30px; /* Adjust the margin as needed */
-}
-
-.numer {
-  border: 5px solid orange;
-  background-color: white;
-  color: black;
-
-  width: 70px;
-
-  border-radius: 50%;
-  text-align: center;
-
-  transform: translate(-38px, -90px);
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 70px;
-
-  left: 0;
-}
-
-.display-hidden-journey {
-  display: none;
-}
-
-@media screen and (max-width: 500px) {
-  .jouney1 {
-    width: 80%;
-  }
-
-  .jouney1 .inner-jouney {
-    height: 70px;
-  }
-  .inner-jouney p {
-    padding: 1px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .display-hidden-journey {
-    display: block;
-  }
-
-  .jouney2 {
-    display: none;
-  }
-}
 
 /* {--------------------------------girl--------------------------------------------------------} */
 

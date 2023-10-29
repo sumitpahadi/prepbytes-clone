@@ -120,88 +120,96 @@ function Frequent() {
       )}
 
       {createria === 2 && (
-          <div className="top-cont">
+        <div className="top-cont">
           <button onClick={question1} className="question">
-          What is the process of enroling in the batch? <p>{ques1 ? "-" : "+"}</p>
+            What is the process of enroling in the batch?{" "}
+            <p>{ques1 ? "-" : "+"}</p>
           </button>
           {ques1 && (
             <div className="answer">
-              <p>You need to fill the application form and wait for our team to get in touch with you.</p>
+              <p>
+                You need to fill the application form and wait for our team to
+                get in touch with you.
+              </p>
             </div>
           )}
           <button onClick={question2} className="question">
-          Classes will be Live or Recorded? <p>{ques2 ? "-" : "+"}</p>
+            Classes will be Live or Recorded? <p>{ques2 ? "-" : "+"}</p>
+          </button>
+          {ques2 && (
+            <div className="answer">
+              <p>Classes will be completely Live</p>
+            </div>
+          )}
+
+          <button onClick={question3} className="question">
+            What will be the class timings? <p>{ques3 ? "-" : "+"}</p>
+          </button>
+          {ques3 && (
+            <div className="answer">
+              <p>What will be the class timings?</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {createria === 3 && (
+        <div className="top-cont">
+          <button onClick={question1} className="question">
+            When will I get placement support? <p>{ques1 ? "-" : "+"}</p>
+          </button>
+          {ques1 && (
+            <div className="answer">
+              <p>
+                You will get placement support after you have completed the
+                program and have finished all projects
+              </p>
+            </div>
+          )}
+          <button onClick={question2} className="question">
+            How exactly is placement support provided?{" "}
+            <p>{ques2 ? "-" : "+"}</p>
           </button>
           {ques2 && (
             <div className="answer">
               <p>
-              Classes will be completely Live
+                Post course completion , your resume will be shared by the
+                partner companies and after your resume is shortlised you will
+                get interview oppurtunity
               </p>
             </div>
           )}
-  
+
           <button onClick={question3} className="question">
-          What will be the class timings? <p>{ques3 ? "-" : "+"}</p>
+            For how long will I get placement support?{" "}
+            <p>{ques3 ? "-" : "+"}</p>
           </button>
           {ques3 && (
             <div className="answer">
               <p>
-              What will be the class timings?
+                You will get placement support for 12 months post course
+                completion
               </p>
             </div>
           )}
-  
-     
+
+          <button onClick={question4} className="question">
+            What if my resume is not getting shortlisted?{" "}
+            <p>{ques4 ? "-" : "+"}</p>
+          </button>
+          {ques4 && (
+            <div className="answer">
+              <p>
+                We have crafted the program very carefully , keeping in mind
+                what recruiters look for in a candidate and their resume so
+                there is a high probablity of resume getting shortlited. In
+                worse case, if resume does not get shortlisted, we will work
+                together on your resume and ensure it gets shortlisted
+              </p>
+            </div>
+          )}
         </div>
       )}
-    
-    {
-        createria===3 &&
-        (
-            <div className="top-cont">
-            <button onClick={question1} className="question">
-            When will I get placement support? <p>{ques1 ? "-" : "+"}</p>
-            </button>
-            {ques1 && (
-              <div className="answer">
-                <p>You will get placement support after you have completed the program and have finished all projects</p>
-              </div>
-            )}
-            <button onClick={question2} className="question">
-            How exactly is placement support provided? <p>{ques2 ? "-" : "+"}</p>
-            </button>
-            {ques2 && (
-              <div className="answer">
-                <p>
-                Post course completion , your resume will be shared by the partner companies and after your resume is shortlised you will get interview oppurtunity
-                </p>
-              </div>
-            )}
-    
-            <button onClick={question3} className="question">
-            For how long will I get placement support? <p>{ques3 ? "-" : "+"}</p>
-            </button>
-            {ques3 && (
-              <div className="answer">
-                <p>
-                You will get placement support for 12 months post course completion
-                </p>
-              </div>
-            )}
-    
-            <button onClick={question4} className="question">
-            What if my resume is not getting shortlisted?   <p>{ques4 ? "-" : "+"}</p>
-            </button>
-            {ques4 && (
-              <div className="answer">
-                <p>
-                We have crafted the program very carefully , keeping in mind what recruiters look for in a candidate and their resume so there is a high probablity of resume getting shortlited. In worse case, if resume does not get shortlisted, we will work together on your resume and ensure it gets shortlisted
-                </p>
-              </div>
-            )}
-          </div>
-        )
-    }
     </div>
   );
 }

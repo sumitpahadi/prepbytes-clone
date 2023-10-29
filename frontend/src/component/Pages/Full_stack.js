@@ -1,9 +1,116 @@
-import React from "react";
-import Toggle from "../Syllabus-toggler/Toggle"
+import React,{useState,useEffect} from "react";
+import Toggle from "../Syllabus-toggler/Toggle";
 import image from "../logos/Logo";
+import axios from "axios"
+import { addtocart } from "../Slice/Createslice";
+import {Link} from "react-router-dom"
+import { loadStripe } from "@stripe/stripe-js";
 import Mutli_Carousel from "../Carousel/Mutli-Carousel";
 import Program_info from "../Program-info/Program_info";
+import Batch from "../Batch - compencment/Batch";
+import { useSelector, useDispatch } from "react-redux";
 function Full_stack() {
+
+
+  const [verified, setVerified] = useState(false);
+
+
+
+
+
+
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    console.log("Token:", token);
+
+    axios
+      .get("https://prepbytes.onrender.com/dashboard", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((response) => {
+        console.log(response.data);
+        setVerified(true);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+
+
+
+  const dispatch = useDispatch();
+  const selelct = useSelector((state) => state.cart.data);
+
+  console.log(selelct);
+
+
+  const makepayment = async () => {
+    const stripe = await loadStripe(
+      "pk_test_51O1PDfSDn9Jvh8C8qUZncvrWSZahMESF3FeF4obkKuNq1rplszqkwgM38wkPeSTU2BAqUI1IoMD23sszROBAeWoU00ZTXXLMoJ"
+    );
+
+    const body = {
+      products: 
+     [
+      {
+        id:23,
+        name:"full stack programm ",
+        price :150000,
+        quantity:1
+      },
+     ]
+    };
+    const headers = {
+      "Content-Type": "application/json",
+    };
+    const response = await fetch(
+      "https://prepbytes.onrender.com/api/create-checkout-session",
+      {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify(body),
+      }
+    );
+    const session = await response.json();
+    const result = stripe.redirectToCheckout({
+      sessionId: session.id,
+    });
+    if (result.error) {
+      console.log(result.error);
+    }
+  };
+
+
+
+
+  const handleClick = (item) => {
+
+    const userid = localStorage.getItem("userid");
+    console.log( userid);
+
+    if (verified) {
+      dispatch(
+        addtocart({
+        
+          id:23,
+          name:"full stack programm ",
+          price :150000,
+          quantity:1
+        }),
+      
+      );
+      
+    } 
+  };
+
+
+
+
+
   console.log(image[0].image1);
   console.log(image[0].image2);
   return (
@@ -66,8 +173,35 @@ function Full_stack() {
             ₹30000
           </p>
           <div className="tryfree">
-            <button>Enroll Now</button>
-            <button>TRy For Free</button>
+
+
+          {verified ? (
+                 
+                 <button onClick={() => {
+                  makepayment();
+                  handleClick();
+              }}>Enroll Now</button>
+              
+                 
+                ) : (
+               
+                   
+                      <button ><Link to={"/login"} style={{color:"white",textDecoration:"none"}}>Register</Link></button>
+                    
+                 
+                )}
+
+
+
+
+                
+           
+
+
+
+
+
+            <button>Try For Free</button>
           </div>
         </div>
       </div>
@@ -93,441 +227,7 @@ function Full_stack() {
       </div>
 
       {/* ------------------------------------------------------------------Batch Commencement-------------------------------------------- */}
-
-      <div className="journey">
-        <div className="jouney1">
-          <div className="inner-jouney">
-            <p>Batch Commencement</p>
-
-            <div className="numer">1</div>
-          </div>
-
-          {/* ---------------------------display hidden------------------------- */}
-          <div className="inner-jouney-2 display-hidden-journey">
-            <div className="list-inner-jouney-2">
-              <p style={{ display: "flex" }}>
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                Get access to dashboard & complete plan
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>
-                Introduction with lead mentor for this program
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                Access to recorded video lectures
-              </p>
-            </div>
-            <div className="list-inner-jouney-2">
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                Access to Mock Tests
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                One live session with mentors per week
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                Every live session will be of 2 hours duration
-              </p>
-            </div>
-          </div>
-
-          {/* ----------------------------------------------------------------------------------------------------- */}
-          <div className="inner-jouney">
-            <p>
-              Learn required languages, <br /> framework & tools
-            </p>
-            <div className="numer">2</div>
-          </div>
-
-          {/* ---------------------------display hidden------------------------- */}
-          <div className="inner-jouney-2 display-hidden-journey">
-            <div className="list-inner-jouney-2">
-              <p style={{ display: "flex" }}>
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                Live online classes of Javascript, ReactJs, NodeJs,Express, HTML
-                & CSS
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>
-                Learn the industry wide used tools like MongoDB, Git & Jira
-              </p>
-            </div>
-          </div>
-
-          {/* ----------------------------------------------------------------------------------------------------- */}
-
-          <div className="inner-jouney">
-            <p>
-              Complete awesome real
-              <br /> world projects
-            </p>
-            <div className="numer">3</div>
-          </div>
-
-          {/* ---------------------------display hidden------------------------- */}
-          <div className="inner-jouney-2 display-hidden-journey">
-            <div className="list-inner-jouney-2">
-              <p style={{ display: "flex" }}>
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                HTML Blog
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>
-                Reminder Clock App
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                Todo App
-              </p>
-            </div>
-            <div className="list-inner-jouney-2">
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                React Blog
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                Chat App
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                E-commerce Web App
-              </p>
-            </div>
-          </div>
-
-          {/* ----------------------------------------------------------------------------------------------------- */}
-          <div className="inner-jouney">
-            <p>
-              Experience the complete <br /> development lifecycle
-            </p>
-            <div className="numer">4</div>
-          </div>
-          {/* ---------------------------display hidden------------------------- */}
-          <div className="inner-jouney-2 display-hidden-journey">
-            <div className="list-inner-jouney-2">
-              <p style={{ display: "flex" }}>
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                Learn the Agile Development Methodology
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>
-                Real time experience of complete software development lifecycle
-                from development to deployment
-              </p>
-            </div>
-          </div>
-
-          {/* ----------------------------------------------------------------------------------------------------- */}
-          <div className="inner-jouney">
-            <p>
-              Be a certified Full <br /> Stack Developer
-            </p>
-            <div className="numer">5</div>
-          </div>
-        </div>
-        {/* ---------------------------display hidden------------------------- */}
-        <div className="inner-jouney-2 display-hidden-journey">
-          <div className="list-inner-jouney-2">
-            <p style={{ display: "flex" }}>
-              <p
-                style={{
-                  color: "orange",
-                  fontSize: "18px",
-                  fontWeight: "bolder",
-                  paddingRight: "5px",
-                }}
-              >
-                {" "}
-                <i class="fa-solid fa-greater-than"></i>
-              </p>{" "}
-              Get certificate of course completion on completing projects,
-              assignments &amp; mock tests
-            </p>
-          </div>
-        </div>
-
-        {/* ----------------------------------------------------------------------------------------------------- */}
-
-        <div className="jouney2">
-          <h2 style={{ textAlign: "center" }}>Batch Commencement</h2>
-
-          <div className="inner-jouney-2">
-            <div className="list-inner-jouney-2">
-              <p style={{ display: "flex" }}>
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                Get access to dashboard & complete plan
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>
-                Access to recorded video lectures
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                One live session with mentors per week
-              </p>
-            </div>
-            <div className="list-inner-jouney-2">
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                Introduction with lead mentor for this program
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                Access to Mock Tests
-              </p>
-              <p style={{ display: "flex" }}>
-                {" "}
-                <p
-                  style={{
-                    color: "orange",
-                    fontSize: "18px",
-                    fontWeight: "bolder",
-                    paddingRight: "5px",
-                  }}
-                >
-                  {" "}
-                  <i class="fa-solid fa-greater-than"></i>
-                </p>{" "}
-                Every live session will be of 2 hours duration
-              </p>
-            </div>
-          </div>
-          <img
-            src="https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/full-stack/how-it-works/works_batchcommencement.svg"
-            alt=""
-          />
-        </div>
-      </div>
+<Batch/>
 
       {/* --------------------------------girl-------------------------------------------------------- */}
 

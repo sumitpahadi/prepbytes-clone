@@ -16,12 +16,15 @@ const userdataSchema = new Schema({
     trim: true,
     minlength: [8, "password should be atleast 8 character"],
   },
-  confirmpassword: {
+  collegename: {
     type: String,
     required: true,
-    trim: true,
-    minlength: [8, "password should be atleast 8 character"],
+  
   },
+  passingyear:{
+    type:Number,
+    required:true
+  }
 
 });
 

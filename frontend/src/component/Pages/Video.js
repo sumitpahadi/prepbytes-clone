@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./Page.css";
 import axios from "axios";
 
-
-
 function Video() {
   const [apidata, setdata] = useState([]);
 
@@ -60,12 +58,6 @@ function Video() {
           );
         })}
       </div>
-
-
-      
-
-
-    
     </div>
   );
 }

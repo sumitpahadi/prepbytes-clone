@@ -13,6 +13,8 @@ import Home from "../Pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import Signup from "../Login and signup/Signup";
+import Login from "../Login and signup/Login";
 
 function Routers() {
   return (
@@ -31,6 +33,8 @@ function Routers() {
         <Route path="/video" element={<Video />} />
         <Route path="/mongodb" element={<Mongodb />} />
         <Route path="/node" element={<Node />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
       <Footer/>
     </div>

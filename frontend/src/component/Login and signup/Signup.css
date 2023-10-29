@@ -1,0 +1,177 @@
+.signup-container1 {
+  display: flex;
+height: 800px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url(https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/blue-background.webp);
+}
+
+.signup-img-conatiner {
+  width: 30%;
+}
+
+.signup-container img {
+  width: 100%;
+}
+
+.inner-container-signup-detail {
+  position: relative;
+
+  background-color: white;
+  padding: 10px;
+}
+.inner-container-signup-detail .prepbyteslogo {
+  position: absolute;
+  top: -51px;
+  left: 20%;
+
+  height: 80px;
+  width: 80px;
+}
+.signup {
+  text-align: center;
+  border: 2px solid black;
+}
+.headings {
+  width: 100%;
+}
+.headings h5 {
+  padding: 0px;
+  margin: 0px;
+}
+.headings p {
+  padding: 0px;
+  margin: 0px;
+}
+.heading-conatiner {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  margin-top: 20px;
+}
+.heading-conatiner img {
+  width: 40px;
+
+  height: 40px;
+}
+.sign-form {
+  display: flex;
+  background-color: white;
+  width: 30%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  gap: 10px;
+  height: auto;
+  flex-direction: column;
+}
+.signup-heading {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  justify-content: center;
+}
+.signup-heading button:first-child {
+  width: 160px;
+  color: #4b8ce8;
+  height: 50px;
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #4b8ce8;
+}
+.signup-heading button:last-child {
+  width: 160px;
+  height: 50px;
+
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid gray;
+}
+
+.user-info {
+  border-bottom: 1px solid gray;
+  display: flex;
+  width: 91%;
+  margin: auto;
+  flex-direction: column;
+}
+.signup-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.user-info input[type="text"] {
+  border: none;
+  background: none;
+}
+.college-detail {
+  width: 100%;
+  margin: auto;
+  display: flex;
+}
+.college-detail .user-info {
+  width: 40%;
+  justify-content: left;
+}
+select {
+  border: none;
+}
+.term input[type =radio]
+{
+    margin-bottom: 9px;
+    font-size: large;
+}
+.term {
+    display: flex;
+    gap: 10px;
+    padding-left: 13px;
+}
+.user-info1 {
+    margin-bottom: 10px;
+}
+.user-info1 button {
+  width: 70%;
+  border-radius: 9px;
+  height: 40px;
+  color: white;
+  display: block;
+ 
+  margin: auto;
+  border: none;
+  background: transparent linear-gradient(180deg, #4b8ce8, #4b8ce8) 0 0
+    no-repeat padding-box;
+}
+
+@media screen and (max-width: 800px) {
+  .signup-container1 {
+    flex-direction: column;
+  }
+
+  .inner-container-signup-detail {
+    display: flex;
+    width: 95%;
+  }
+  .signup-img-conatiner {
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+  .signup-img-conatiner img {
+    width: 100%;
+  }
+  .sign-form {
+    width: 80%;
+  }
+  .inner-container-signup-detail .prepbyteslogo {
+    display: none;
+  }
+
+  .signup-container1 {
+ height: auto;
+    
+  }
+}

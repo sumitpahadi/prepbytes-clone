@@ -6,12 +6,13 @@ import Mutli_Carousel from "../Carousel/Mutli-Carousel";
 import Program_syllabus from "../Program syllabus/Program_syllabus";
 import ApplicationDetail from "../Next Batch/Apllication_detail";
 import Frequent from "../Frequent question/Frequent";
- 
 
 function Elevation() {
   return (
     <div>
       {/* -------------------------elevation------------------------header------------------------------------- */}
+      <br />
+      <br /> <br />
       <div className="IncomeSharingHeader">
         <section className="IncomeSharingHeader-main">
           <div className="IncomeSharingHeader-main__right">
@@ -81,9 +82,7 @@ function Elevation() {
           </div>
         </section>
       </div>
-
       {/* -------------------new batch-------------------------------------------- */}
-
       <section className="NewBatch">
         <div className="NewBatch__main">
           <div className="NewBatch__main_left">
@@ -158,9 +157,7 @@ function Elevation() {
           </div>
         </div>
       </section>
-
       {/* ---------------------dream-----job */}
-
       <div className="IncomeSharingJourney__container">
         <div className="IncomeSharingJourney__heading_container">
           <h1 className="IncomeSharingJourney__heading">
@@ -360,7 +357,6 @@ function Elevation() {
           </div>
         </div>
       </div>
-
       {/* ----------------------------------------------program highlight---------------------------------------- */}
       <section className="ProgramHighlightsNew">
         <div className="ProgramHighlightsNew__heading_container">
@@ -482,13 +478,8 @@ function Elevation() {
           </div>
         </div>
       </section>
-
-{/* ---------------------------------------------------syllabus----------------------------------------- */}
-
-
-
-      <Program_syllabus/>
-
+      {/* ---------------------------------------------------syllabus----------------------------------------- */}
+      <Program_syllabus />
       {/* ---------------------------------------upcomming------------------------------- */}
       <section className="UpcomingBatches">
         <div className="UpcomingBatches__main">
@@ -510,31 +501,8 @@ function Elevation() {
           </div>
         </div>
       </section>
-
-
-{/* ----------------------------------------------testmolis------------------------------------------------ */}
-
-
-<Mutli_Carousel></Mutli_Carousel>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      {/* ----------------------------------------------testmolis------------------------------------------------ */}
+      <Mutli_Carousel></Mutli_Carousel>
       {/* ------------------------------------student placed---------------------------------------- */}
       <div className="StudentsPlaced">
         <div className="StudentsPlaced__main">
@@ -646,11 +614,8 @@ function Elevation() {
           </div>
         </div>
       </div>
-
-
       {/* -------------------------------------------------------------------aplllication detail--------------------- */}
-      <ApplicationDetail/>
-
+      <ApplicationDetail />
       {/* ----------------------------------payment-------plan-------------------------------------------- */}
       <div className="PaymentPlans">
         <section className="PaymentPlans__main">
@@ -718,10 +683,8 @@ function Elevation() {
           </div>
         </section>
       </div>
-
       {/* ----------------------our mentor---------------------------------------------- */}
-
-      <div className="prepbytes-mentor" >
+      <div className="prepbytes-mentor">
         <div className="mentor-1">
           <img
             src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/mamta_mentor_background.png"
@@ -797,12 +760,8 @@ function Elevation() {
             className="center"
           />
         </div>
-        
-     
       </div>
-
       {/* --------------------------------------webinar-------------------------- */}
-
       <div className="TestDetails">
         <div className="TestDetails__main">
           <div className="TestDetails__main-container">
@@ -850,7 +809,6 @@ function Elevation() {
           </div>
         </div>
       </div>
-
       <div className="IncomeSharingMetrics">
         <div className="IncomeSharingMetrics__main">
           <div className="IncomeSharingMetrics__main-container">
@@ -904,11 +862,8 @@ function Elevation() {
           </div>
         </div>
       </div>
-
-
-
       {/* -----------------------------------------------------frequent asked question--------------------------- */}
-      <Frequent/>
+      <Frequent />
     </div>
   );
 }

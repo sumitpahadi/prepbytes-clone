@@ -1,11 +1,99 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "./Page.css";
-import { useEffect, useState } from "react";
+import { addtocart } from "../Slice/Createslice";
+import { loadStripe } from "@stripe/stripe-js";
+import { useSelector, useDispatch } from "react-redux";
 function Mock_test() {
+  const [verified, setVerified] = useState(false);
   const [apidata, setdata] = useState([]);
-  const [topic, settopic] = useState([]);
-  console.log("topic", topic);
+  console.log(apidata)
+  const dispatch = useDispatch();
+  const selelct = useSelector((state) => state.cart.data);
+
+  console.log(selelct);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    console.log("Token:", token);
+
+    axios
+      .get("https://prepbytes.onrender.com/dashboard", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((response) => {
+        console.log(response.data);
+        setVerified(true);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  const makepayment = async (item) => {
+    const stripe = await loadStripe(
+      "pk_test_51O1PDfSDn9Jvh8C8qUZncvrWSZahMESF3FeF4obkKuNq1rplszqkwgM38wkPeSTU2BAqUI1IoMD23sszROBAeWoU00ZTXXLMoJ"
+    );
+
+    const body = {
+      products: [
+        {
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          quantity: 1,
+        },
+      ],
+    };
+    const headers = {
+      "Content-Type": "application/json",
+    };
+    const response = await fetch(
+      "https://prepbytes.onrender.com/create-checkout-session",
+      {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify(body),
+      }
+    );
+    const session = await response.json();
+    const result = stripe.redirectToCheckout({
+      sessionId: session.id,
+    });
+    if (result.error) {
+      console.log(result.error);
+    }
+  };
+
+  const handleClick = (item) => {
+    const userid = localStorage.getItem("userid");
+
+
+    if (verified) {
+     
+      const isItemInCart = selelct.some(cartItem => cartItem.id === item.id);
+
+      if (!isItemInCart) {
+        dispatch(
+          addtocart({
+            id: item.id,
+            img: item.img,
+            name: item.name,
+            price: item.price,
+            quantity: 1,
+          })
+        );
+      } else {
+        console.log('Item is already in the cart.');
+        // You might want to provide a message to the user indicating the item is already in the cart.
+      }
+    }
+  };
+
+
 
   useEffect(() => {
     axios
@@ -15,15 +103,7 @@ function Mock_test() {
       })
       .catch((error) => console.log(error));
   }, []);
-  useEffect(() => {
-    axios
-      .get("https://prepbytes.onrender.com/topic")
-      .then((response) => {
-        settopic(response.data.data);
-        console.log("response of topics ", response);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+
 
   return (
     <>
@@ -49,7 +129,9 @@ function Mock_test() {
         </div>
       </div>
       <div className="container-for-mock">
-        {apidata.map((item, index) => {
+        {
+        apidata.filter((item)=>item.id>=0 && item.id <=11)
+        .map((item, index) => {
           return (
             <div className="inner-mock" key={index}>
               <img src={item.img} alt="" />
@@ -77,7 +159,25 @@ function Mock_test() {
                   Time
                 </p>
               </div>
-              <button>Test Know</button>
+              {verified ? (
+                <button
+                  onClick={() => {
+                    makepayment(item);
+                    handleClick(item);
+                  }}
+                >
+                  Buy Now
+                </button>
+              ) : (
+                <button>
+                  <Link
+                    to={"/login"}
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
+                    Register
+                  </Link>
+                </button>
+              )}
             </div>
           );
         })}
@@ -94,12 +194,30 @@ function Mock_test() {
         </div>
       </div>
       <div className="container-for-mock">
-        {topic.map((item, index) => {
+        {apidata.filter((item)=>item.id>11 && item.id <=20)
+        .map((item, index) => {
           return (
             <div className="inner-mock1" key={index}>
               <img src={item.img} alt="" />
               <h4>{item.name}</h4>
-              <button>Test Know</button>
+              {verified ? (
+                <button
+                  onClick={() => {
+                    makepayment(item);
+                    handleClick(item);
+                  }}
+                >
+                  Buy Now
+                </button>
+              ) : (
+                <button>
+                  <Link
+                    to={"/login"}
+                    style={{ color: "white", textDecoration: "none" }}>
+                    Register
+                  </Link>
+                </button>
+              )}
             </div>
           );
         })}

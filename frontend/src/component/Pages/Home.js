@@ -1,18 +1,21 @@
 import React from "react";
 import "../Style.css";
 import Slider from "../Slider/Slider";
+
 import Form from "../Form/Fom";
+
 function Home() {
+
   return (
     <div>
       <div className="container">
         <div className="text">
           <h1>
-            <p style={{ color: "red" }}>Start your journey of success</p>{" "}
+            <p style={{ color: "#f78077" }}>Start your journey of success</p>{" "}
             Personalised Coding Programs to make coding easier for you
           </h1>
 
-          <p>Want to know how PrepBytes can help you?</p>
+          <p  style={{ color: "#f78077" }} >Want to know how PrepBytes can help you?</p>
           <button>Explore now</button>
         </div>
         <div className="image">
