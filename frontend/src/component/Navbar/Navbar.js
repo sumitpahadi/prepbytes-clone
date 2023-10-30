@@ -4,6 +4,7 @@ import axios from "axios";
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Login_toogle from "../Login-signup/Login_toogle";
 function Navbar() {
   const [verified, setVerified] = useState(false);
   const [token, setToken] = useState(localStorage.getItem("token"));
@@ -55,20 +56,12 @@ function Navbar() {
         />
       </div>
       <div className="nav">
-        {verified ? (
-          <div className="auth"></div>
-        ) : (
-          <div className="auth">
-            <Link to={"/login"}>
-              {" "}
-              <button className="login">Login</button>
-            </Link>
-            <Link to={"/signup"}>
-              {" "}
-              <button className="signup">Signup</button>
-            </Link>
-          </div>
-        )}
+        <Login_toogle/>
+        
+
+
+
+
 
         <div className="menubar">
           <ul class="menu">

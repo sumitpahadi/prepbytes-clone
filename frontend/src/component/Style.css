@@ -49,25 +49,7 @@ gap: 10px;
   display: flex;
   flex-direction: column;
 }
-.auth {
-  display: flex;
-  gap: 5px;
-  justify-content: end;
-}
-.auth .login {
-  width: 100px;
-  background-color: white;
-  color: #ff219f;
-  border-radius: 5px;
-  border: 2px solid #ff219f;
-}
-.auth .signup {
-  width: 100px;
-  background-color: #ff219f;
-  border: 2px solid #ff219f;
-  border-radius: 5px;
-  color: white;
-}
+
 .menubar {
   display: flex;
   height: 20px;
