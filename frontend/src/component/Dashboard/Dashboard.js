@@ -56,36 +56,24 @@ function Dashboard() {
             );
           })}
 
-          {/* ----------------------------------for test ----------------------------------- */}
+        {/* ----------------------------------for test ----------------------------------- */}
 
-
-          {
-            data.filter((item)=>item.id>=1 && item.id<=20)
-            .map((item,index)=>{
-              return (
-                <div key={index} className="test-conatiner">
-                  <div className="iamge-cont-for-test">
-                    <img src={item.img} alt="" />
-                  </div>
-                  <div className="name-button">
-                    <p>{item.name}</p>
-                    <button>Go To Test</button>
-                  </div>
-
-
-
-
+        {data
+          .filter((item) => item.id >= 1 && item.id <= 20)
+          .map((item, index) => {
+            return (
+              <div key={index} className="test-conatiner">
+                <div className="iamge-cont-for-test">
+                  <img src={item.img} alt="" />
                 </div>
-              )
-            })
-          }
-
-
-
+                <div className="name-button">
+                  <p>{item.name}</p>
+                  <button>Go To Test</button>
+                </div>
+              </div>
+            );
+          })}
       </div>
-
-
-
     </div>
   );
 }

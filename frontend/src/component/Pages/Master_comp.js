@@ -21,7 +21,7 @@ function Master_comp() {
     console.log("Token:", token);
 
     axios
-      .get("http://localhost:4000/dashboard", {
+      .get("https://prepbytes.onrender.com/dashboard", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
