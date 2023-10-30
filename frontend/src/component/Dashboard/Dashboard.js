@@ -24,42 +24,68 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className="dashboard-detail">
-        {data.map((item, index) => {
-          return (
-            <div key={index} className="img-dashboard">
-              <div className="prep">
-                <img src={item.log} alt="" />
-                <hr />
-                <div className="date-time">
-                  <div className="date-course">
-                    <img src={item.cal} alt="" />
-                    <p>
-                      {item.startdate}
-                      <br />
-                      {item.date}
-                    </p>
-                  </div>
-                  <div className="time-course">
-                    <img src={item.time} alt="" />
-                    <p>
-                      {item.lastdate} <br />
-                      {item.last}
-                    </p>
+      <div className="dashboard-top-container">
+        {data
+          .filter((item) => item.id === 22 || item.id === 23)
+          .map((item, index) => {
+            return (
+              <div key={index} className="courses-of-dash">
+                <div className="prepbytes-log">
+                  <img src={item.log} alt="" />
+                  <div className="timing">
+                    <div className="starting">
+                      <img src={item.cal} alt="" />
+                      <p>
+                        Start Date <br /> 2 Mar 2023
+                      </p>
+                    </div>
+                    <div className="lastdate">
+                      <img src={item.time} alt="" />
+                      <p>
+                        Last Date <br /> 2 Oct 2023
+                      </p>
+                    </div>
                   </div>
                 </div>
+                <div className="name-button">
+                  <p>{item.name}</p>
+                  <button>Go To Course</button>
+                </div>
+                <img src={item.backimg} className="backimage" alt="" />
               </div>
-              <img
-                src={item.img || item.backimg}
-                className="backgroundimage"
-                alt=""
-              />
-              <p>{item.name}</p>
-              <button>Go to Course</button>
-            </div>
-          );
-        })}
+            );
+          })}
+
+          {/* ----------------------------------for test ----------------------------------- */}
+
+
+          {
+            data.filter((item)=>item.id>=1 && item.id<=20)
+            .map((item,index)=>{
+              return (
+                <div key={index} className="test-conatiner">
+                  <div className="iamge-cont-for-test">
+                    <img src={item.img} alt="" />
+                  </div>
+                  <div className="name-button">
+                    <p>{item.name}</p>
+                    <button>Go To Test</button>
+                  </div>
+
+
+
+
+                </div>
+              )
+            })
+          }
+
+
+
       </div>
+
+
+
     </div>
   );
 }

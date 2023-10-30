@@ -1,127 +1,138 @@
-
-
-
-.dash-navbar{
-    display: flex;
-    border-bottom: 1px solid gray ;
-    padding: 10px;
-    justify-content: space-around;
+.dash-navbar {
+  display: flex;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  justify-content: space-around;
 }
-.logo-of-prepbytes img{
-    width: 160px;
-    height: 70px;
-    
+.logo-of-prepbytes img {
+  width: 160px;
+  height: 70px;
 }
 
-.username-of-client{
-    display: flex;
-   
-
+.username-of-client {
+  display: flex;
 }
-.username-of-client h2{
-    background-color: #03A6EC;
-    color:  white;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    margin-right: 10px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-.username-of-client p{
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-
-.dashboard-detail{
-    height: 100vh;
-    display: flex;
+.username-of-client h2 {
+  background-color: #03a6ec;
+  color: white;
+  height: 40px;
   
-    gap: 20px;
-    background-color: #f0f3f4;
-    justify-content: left;
-    padding: 30px;
+  width: 40px;
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.username-of-client p {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.img-dashboard {
-    background-color: white;
-    width: 300px;
-    position: relative;
-    display: flex;
-    height: 300px;
-    flex-direction: column;
-   
-   border-radius: 10px;
+/* -----------------------------------------------dashboard ------------------------------------- */
 
+.dashboard-top-container {
+  background-color: #f0f3f4;
+  display: flex;
+  
+  padding: 30px;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: left;
 }
-.img-dashboard img{
-    display: block;
-    margin: auto;
-   width: 90%;
-}
-.img-dashboard p{
-    color: #424242;
-    font-size: 22px;
-    text-align: center;
-}
-.img-dashboard button {
-    background-color:  #03A6EC ;
-    color:  white;
-    width: 90%;
-   
-    border: none;
-    border-radius: 8px;
-    height: 30px;
-    display: block;
-    margin: auto;
-}
-.prep{
-    display: flex;
-    width: 80%;
-    margin-top: 20px;
-    justify-content: left;
+.courses-of-dash {
+  border-radius: 9px;
+  width: 250px;
+  position: relative;
+
+  background-color: white;
 }
 
+.prepbytes-log {
+  gap: 20px;
+  margin: auto;
+  width: 90%;
 
-.date-time{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.prep img{
-    width: 90px;
-    height: 90px;
-}
-.date-course{
-    display: flex;
-}
-.time-course{
-    display: flex;
+  display: flex;
 }
 
-.date-course img{
-    width: 30px;
-    height: 30px;
+.prepbytes-log img {
+  width: 90px;
+  height: 90px;
 }
-.date-time p{
-    font-size: 12px;
+.starting {
+  display: flex;
 }
-.time-course img{
-    width: 30px;
-    height: 30px;
+.starting p {
+  font-size: 12px;
+}
+.starting img {
+  width: 30px;
+  height: 30px;
+}
+.lastdate p {
+  font-size: 12px;
 }
 
-.backgroundimage{
-    height: auto;
+.lastdate {
+  display: flex;
 }
-.backgroundimage{
-    position: absolute;
+.lastdate img {
+  width: 30px;
+  height: 30px;
+}
+.name-button p {
+  text-align: center;
+  letter-spacing: 0.38px;
+  color: #424242;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.name-button button {
+  width: 70%;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #00a5ec 0 0 no-repeat padding-box;
+  border: 1px solid transparent;
+  color: white;
+  height: 40px;
+  position: absolute;
+  bottom: 0px;
+  transform: translate(-11px, 24px);
+  right: 10%;
+}
+
+
+
+
+.backimage{
     bottom: 0px;
     right: 0px;
+
+    width: 100%;
     z-index: 0;
+    position: absolute;
+}
+
+/* -----------------------------------------test----------------------- */
+
+.test-conatiner{
+    width: 250px;
+    background-color: white;
+    position: relative;
+   border-radius: 10px;
+}
+
+.iamge-cont-for-test {
+    width: 100%;
+}
+.iamge-cont-for-test img{
+    width: 60%;
+    display: block;
+    margin: auto;
 }

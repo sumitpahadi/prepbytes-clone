@@ -52,7 +52,7 @@ function Mock_test() {
       "Content-Type": "application/json",
     };
     const response = await fetch(
-      "https://prepbytes.onrender.com/create-checkout-session",
+      "http://localhost:4000/api/create-checkout-session",
       {
         method: "POST",
         headers: headers,
@@ -81,7 +81,7 @@ function Mock_test() {
           addtocart({
             id: item.id,
             img: item.img,
-            name: item.name,
+            testname: item.name,
             price: item.price,
             quantity: 1,
           })
