@@ -26,7 +26,7 @@ function Batch() {
           <div className="inner-jouney">
             <p onClick={handlebatch } style={{cursor:"pointer"}}>Batch Commencement</p>
 
-            <div className="numer">1</div>
+            <div className="numer"><h4>1</h4></div>
           </div>
 
           {/* ---------------------------display hidden------------------------- */}
@@ -131,7 +131,7 @@ function Batch() {
             <p onClick={handlerequied} style={{cursor:"pointer"}}>
               Learn required languages, <br /> framework & tools
             </p>
-            <div className="numer">2</div>
+            <div className="numer"><h4>2</h4></div>
           </div>
 
           {/* ---------------------------display hidden------------------------- */}
@@ -177,7 +177,7 @@ function Batch() {
               Complete awesome real
               <br /> world projects
             </p>
-            <div className="numer">3</div>
+            <div className="numer"><h4>3</h4></div>
           </div>
 
           {/* ---------------------------display hidden------------------------- */}
@@ -282,7 +282,7 @@ function Batch() {
             <p onClick={handleexp} style={{cursor:"pointer"}}>
               Experience the complete <br /> development lifecycle
             </p>
-            <div className="numer">4</div>
+            <div className="numer"><h4>4</h4></div>
           </div>
           {/* ---------------------------display hidden------------------------- */}
           <div className="inner-jouney-2 display-hidden-journey">
@@ -325,7 +325,7 @@ function Batch() {
             <p onClick={handlecertidied} style={{cursor:"pointer"}}>
               Be a certified Full <br /> Stack Developer
             </p>
-            <div className="numer">5</div>
+            <div className="numer"><h4>5</h4></div>
           </div>
         </div>
         {/* ---------------------------display hidden------------------------- */}
@@ -353,7 +353,7 @@ function Batch() {
 
         {batch === 1 && (
           <div className="jouney2">
-            <h2 style={{ textAlign: "center" }}>Batch Commencement</h2>
+            <h2 style={{ textAlign: "center",padding:"20px" }}>Batch Commencement</h2>
 
             <div className="inner-jouney-2">
               <div className="list-inner-jouney-2">
@@ -364,6 +364,7 @@ function Batch() {
                       fontSize: "18px",
                       fontWeight: "bolder",
                       paddingRight: "5px",
+
                     }}
                   >
                     {" "}
@@ -459,7 +460,7 @@ function Batch() {
 
         {batch === 2 && (
           <div className="jouney2">
-            <h2 style={{ textAlign: "center" }}>
+            <h2 style={{ textAlign: "center",padding:"20px" }}>
               Learn required languages, framework & tools
             </h2>
 
@@ -508,7 +509,7 @@ function Batch() {
 
         {batch === 3 && (
           <div className="jouney2">
-            <h2 style={{ textAlign: "center" }}>
+            <h2 style={{ textAlign: "center",padding:"20px" }}>
               Complete awesome real world projects
             </h2>
 
@@ -617,7 +618,7 @@ function Batch() {
         {batch ===
           4 && (
             <div className="jouney2">
-              <h2 style={{ textAlign: "center" }}>
+              <h2 style={{ textAlign: "center",padding:"20px" }}>
                 Experience the complete development lifecycle
               </h2>
 
@@ -665,7 +666,7 @@ function Batch() {
           )}
         {batch === 5 && (
           <div className="jouney2">
-            <h2 style={{ textAlign: "center" }}>
+            <h2 style={{ textAlign: "center",padding:"20px" }}>
               Be a certified Full Stack Developer
             </h2>
 

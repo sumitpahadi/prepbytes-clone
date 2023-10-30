@@ -4,7 +4,6 @@ import axios from "axios";
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Login_toogle from "../Login-signup/Login_toogle";
 function Navbar() {
   const [verified, setVerified] = useState(false);
   const [token, setToken] = useState(localStorage.getItem("token"));
@@ -15,8 +14,8 @@ function Navbar() {
   const handletoken = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userid");
-    localStorage.removeItem("cartData")
-    localStorage.removeItem("firstname")
+    localStorage.removeItem("cartData");
+    localStorage.removeItem("firstname");
     localStorage.removeItem("username");
   };
 
@@ -56,25 +55,33 @@ function Navbar() {
         />
       </div>
       <div className="nav">
-        <Login_toogle/>
-        
-
-
-
-
+        {username ? (
+          <div className="auth"></div>
+        ) : (
+          <div className="auth">
+            <Link to={"/login"}>
+              {" "}
+              <button className="login">Login</button>
+            </Link>
+            <Link to={"/signup"}>
+              {" "}
+              <button className="signup">Signup</button>
+            </Link>
+          </div>
+        )}
 
         <div className="menubar">
           <ul class="menu">
             <li class="dropdown dropdown-toggle">
               Study Material
-              <ul class="dropdown-content ">
+              <ul class="dropdown-content " style={{backgroundColor:"white",fontWeight:"bold"}} >
                 <li>
-                  <Link to={"mock_test"} onClick={closeMenu}>
+                  <Link to={"mock_test"} onClick={closeMenu} style={{ color:"#929292",fontSize:"13px"}}>
                     Mock Test
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/video"} onClick={closeMenu}>
+                  <Link to={"/video"} onClick={closeMenu} style={{ color:"#929292",fontSize:"13px"}}>
                     Video Tutorial
                   </Link>
                 </li>
@@ -82,17 +89,17 @@ function Navbar() {
             </li>
           </ul>
 
-          <ul>
+          <ul >
             <li class="dropdown dropdown-toggle">
               Course and Program
-              <ul class="dropdown-content ">
+              <ul class="dropdown-content " style={{backgroundColor:"white",fontWeight:"bold"}}>
                 <li>
-                  <Link to={"/master_comp"} onClick={closeMenu}>
+                  <Link to={"/master_comp"} onClick={closeMenu} style={{ color:"#929292",fontSize:"13px",}}>
                     Master Competitive Programming
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/full_stack"} onClick={closeMenu}>
+                  <Link to={"/full_stack"} onClick={closeMenu} style={{ color:"#929292",fontSize:"13px"}}>
                     Full Stack Program
                   </Link>
                 </li>
@@ -113,35 +120,35 @@ function Navbar() {
           <ul>
             <li class="dropdown dropdown-toggle">
               Project
-              <ul class="dropdown-content ">
+              <ul class="dropdown-content project-we-create" style={{ color:"#929292",fontSize:"13px",backgroundColor:"white",fontWeight:"bold"}}>
                 <li>
-                  <Link to={"html"} onClick={closeMenu}>
+                  <Link to={"html"} onClick={closeMenu} style={{ color:"#929292",fontSize:"13px"}}>
                     HTML
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/css"} onClick={closeMenu}>
+                  <Link to={"/css"} onClick={closeMenu} style={{ color:"#929292",fontSize:"13px"}}>
                     {" "}
                     CSS
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/javascript"} onClick={closeMenu}>
+                  <Link to={"/javascript"} onClick={closeMenu} style={{ color:"#929292",fontSize:"13px"}}>
                     Javascript
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/reactjs"} onClick={closeMenu}>
+                  <Link to={"/reactjs"} onClick={closeMenu} style={{ color:"#929292",fontSize:"13px"}}>
                     React
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/node"} onClick={closeMenu}>
+                  <Link to={"/node"} onClick={closeMenu} style={{ color:"#929292",fontSize:"13px"}}>
                     Node
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/mongodb"} onClick={closeMenu}>
+                  <Link to={"/mongodb"} onClick={closeMenu} style={{ color:"#929292",fontSize:"13px"}}>
                     Mongodb
                   </Link>
                 </li>
@@ -151,11 +158,11 @@ function Navbar() {
           <ul>
             <li>
               {" "}
-              <div class="dropdown">
+              <div class="dropdown" dropdown-toggle>
                 {username ? (
                   <>
                     <div
-                      className="username dropdown-toggle"
+                      className="username  "
                       href="#"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -166,7 +173,11 @@ function Navbar() {
                     </div>
                     <ul class="dropdown-menu">
                       <li>
-                        <Link className="dropdown-item" href="#">
+                        <Link
+                          className="dropdown-item"
+                          href="#"
+                          to={"/dashboard"}
+                          style={{ color:"#929292",fontSize:"13px",fontWeight:"bold"}}>
                           <img
                             style={{ paddingRight: "10px" }}
                             src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOS4yMjMiIGhlaWdodD0iMjIuODg4IiB2aWV3Qm94PSIwIDAgMTkuMjIzIDIyLjg4OCI+CiAgPGcgaWQ9InJlYWRpbmctYm9vayIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQwLjk5NCkiPgogICAgPHBhdGggaWQ9IlBhdGhfMSIgZGF0YS1uYW1lPSJQYXRoIDEiIGQ9Ik02MC4yMTcsMTQuNzUyYTIuMjM5LDIuMjM5LDAsMCwwLTEuNzg4LTIuMTlWMTAuMTQ4YS42NzEuNjcxLDAsMCwwLS45MDYtLjYyOGwtMS4yOC40OGE3LjgxOCw3LjgxOCwwLDAsMC0yLjk4MS0xLjkzNiw0LjQ3LDQuNDcsMCwxLDAtNS4zMTIsMEE3LjgxOCw3LjgxOCwwLDAsMCw0NC45NjgsMTBsLTEuMjgtLjQ4YS42NzEuNjcxLDAsMCwwLS45MDYuNjI4djIuNDE0YTIuMjM1LDIuMjM1LDAsMCwwLDAsNC4zOHYyLjU5M2EuNjcxLjY3MSwwLDAsMCwuNDM1LjYyOGw3LjE1MywyLjY4MmEuNjc4LjY3OCwwLDAsMCwuNDcxLDBsNy4xNTMtMi42ODJhLjY3MS42NzEsMCwwLDAsLjQzNS0uNjI4VjE2Ljk0MkEyLjIzOSwyLjIzOSwwLDAsMCw2MC4yMTcsMTQuNzUyWk00Ny40NzYsNC40N0EzLjEyOSwzLjEyOSwwLDEsMSw1MC42MDUsNy42LDMuMTMzLDMuMTMzLDAsMCwxLDQ3LjQ3Niw0LjQ3Wm0zLjEyOSw0LjQ3YTYuNDcyLDYuNDcyLDAsMCwxLDQuMjQyLDEuNTgybC00LjI0MiwxLjU5MS00LjI0Mi0xLjU5MUE2LjQ3Miw2LjQ3MiwwLDAsMSw1MC42MDUsOC45NDFabS04LjI3LDUuODExYS45LjksMCwwLDEsLjg5NC0uODk0aC40NDd2MS43ODhoLS40NDdBLjkuOSwwLDAsMSw0Mi4zMzUsMTQuNzUyWm0xLjc4OCwyLjIxM2ExLjEyLDEuMTIsMCwwLDAsLjg5NC0xLjFWMTMuNjM1YTEuMTIsMS4xMiwwLDAsMC0uODk0LTEuMVYxMS4xMTVsNS44MTEsMi4xNzlWMjEuMjVsLTUuODExLTIuMTc5Wm03LjE1Myw0LjI4NVYxMy4yOTVsNS44MTEtMi4xNzlWMTIuNTRhMS4xMiwxLjEyLDAsMCwwLS44OTQsMS4xVjE1Ljg3YTEuMTIsMS4xMiwwLDAsMCwuODk0LDEuMXYyLjEwNlptNi43MDYtNS42aC0uNDQ3VjEzLjg1OGguNDQ3YS44OTQuODk0LDAsMCwxLDAsMS43ODhaIiBmaWxsPSIjMDM2Ii8+CiAgPC9nPgo8L3N2Zz4K"
@@ -218,34 +229,52 @@ function Navbar() {
       </button>
       {menuOpen ? (
         <div className="menubar2">
-
-
-
-{
-  username ? (
-    <div>
-      <ul>
-        <Link to={"/master_comp"} style={{ textDecoration: "none", color: "black", display:"flex" }}>
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIj4KICA8cGF0aCBpZD0idXNlciIgZD0iTTEwLjUsOEExMC41LDEwLjUsMCwxLDAsMjEsMTguNSwxMC41LDEwLjUsMCwwLDAsMTAuNSw4Wm0wLDQuMDY1QTMuNzI2LDMuNzI2LDAsMSwxLDYuNzc0LDE1Ljc5LDMuNzI2LDMuNzI2LDAsMCwxLDEwLjUsMTIuMDY1Wm0wLDE0LjU2NWE4LjExMyw4LjExMywwLDAsMS02LjItMi44ODgsNC43MjEsNC43MjEsMCwwLDEsNC4xNy0yLjUzMiwxLjAzNiwxLjAzNiwwLDAsMSwuMy4wNDcsNS42MDYsNS42MDYsMCwwLDAsMS43MzIuMjkyLDUuNTg0LDUuNTg0LDAsMCwwLDEuNzMyLS4yOTIsMS4wMzYsMS4wMzYsMCwwLDEsLjMtLjA0Nyw0LjcyMSw0LjcyMSwwLDAsMSw0LjE3LDIuNTMyQTguMTEzLDguMTEzLDAsMCwxLDEwLjUsMjYuNjI5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtOCkiIGZpbGw9IiMwMzYiLz4KPC9zdmc+Cg==" alt="" />
-          <li onClick={closeMenu} style={{paddingLeft:"10px"}}>user</li>
-        </Link>
-      </ul>
-      <ul>
-        <Link to={"/master_comp"} style={{ textDecoration: "none", color: "black",display:"flex" }}>
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOS4yMjMiIGhlaWdodD0iMjIuODg4IiB2aWV3Qm94PSIwIDAgMTkuMjIzIDIyLjg4OCI+CiAgPGcgaWQ9InJlYWRpbmctYm9vayIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQwLjk5NCkiPgogICAgPHBhdGggaWQ9IlBhdGhfMSIgZGF0YS1uYW1lPSJQYXRoIDEiIGQ9Ik02MC4yMTcsMTQuNzUyYTIuMjM5LDIuMjM5LDAsMCwwLTEuNzg4LTIuMTlWMTAuMTQ4YS42NzEuNjcxLDAsMCwwLS45MDYtLjYyOGwtMS4yOC40OGE3LjgxOCw3LjgxOCwwLDAsMC0yLjk4MS0xLjkzNiw0LjQ3LDQuNDcsMCwxLDAtNS4zMTIsMEE3LjgxOCw3LjgxOCwwLDAsMCw0NC45NjgsMTBsLTEuMjgtLjQ4YS42NzEuNjcxLDAsMCwwLS45MDYuNjI4djIuNDE0YTIuMjM1LDIuMjM1LDAsMCwwLDAsNC4zOHYyLjU5M2EuNjcxLjY3MSwwLDAsMCwuNDM1LjYyOGw3LjE1MywyLjY4MmEuNjc4LjY3OCwwLDAsMCwuNDcxLDBsNy4xNTMtMi42ODJhLjY3MS42NzEsMCwwLDAsLjQzNS0uNjI4VjE2Ljk0MkEyLjIzOSwyLjIzOSwwLDAsMCw2MC4yMTcsMTQuNzUyWk00Ny40NzYsNC40N0EzLjEyOSwzLjEyOSwwLDEsMSw1MC42MDUsNy42LDMuMTMzLDMuMTMzLDAsMCwxLDQ3LjQ3Niw0LjQ3Wm0zLjEyOSw0LjQ3YTYuNDcyLDYuNDcyLDAsMCwxLDQuMjQyLDEuNTgybC00LjI0MiwxLjU5MS00LjI0Mi0xLjU5MUE2LjQ3Miw2LjQ3MiwwLDAsMSw1MC42MDUsOC45NDFabS04LjI3LDUuODExYS45LjksMCwwLDEsLjg5NC0uODk0aC40NDd2MS43ODhoLS40NDdBLjkuOSwwLDAsMSw0Mi4zMzUsMTQuNzUyWm0xLjc4OCwyLjIxM2ExLjEyLDEuMTIsMCwwLDAsLjg5NC0xLjFWMTMuNjM1YTEuMTIsMS4xMiwwLDAsMC0uODk0LTEuMVYxMS4xMTVsNS44MTEsMi4xNzlWMjEuMjVsLTUuODExLTIuMTc5Wm03LjE1Myw0LjI4NVYxMy4yOTVsNS44MTEtMi4xNzlWMTIuNTRhMS4xMiwxLjEyLDAsMCwwLS44OTQsMS4xVjE1Ljg3YTEuMTIsMS4xMiwwLDAsMCwuODk0LDEuMXYyLjEwNlptNi43MDYtNS42aC0uNDQ3VjEzLjg1OGguNDQ3YS44OTQuODk0LDAsMCwxLDAsMS43ODhaIiBmaWxsPSIjMDM2Ii8+CiAgPC9nPgo8L3N2Zz4K" alt="" />
-          <li onClick={closeMenu} style={{paddingLeft:"10px"}}>My Dashboard</li>
-        </Link>
-      </ul>
-    </div>
-  ) : null
-}
-
-
-         
-
-
-
-
+          {username ? (
+            <div>
+              <ul>
+                <Link
+                  to={"/master_comp"}
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                    display: "flex",
+                  }}
+                >
+                  <img
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIj4KICA8cGF0aCBpZD0idXNlciIgZD0iTTEwLjUsOEExMC41LDEwLjUsMCwxLDAsMjEsMTguNSwxMC41LDEwLjUsMCwwLDAsMTAuNSw4Wm0wLDQuMDY1QTMuNzI2LDMuNzI2LDAsMSwxLDYuNzc0LDE1Ljc5LDMuNzI2LDMuNzI2LDAsMCwxLDEwLjUsMTIuMDY1Wm0wLDE0LjU2NWE4LjExMyw4LjExMywwLDAsMS02LjItMi44ODgsNC43MjEsNC43MjEsMCwwLDEsNC4xNy0yLjUzMiwxLjAzNiwxLjAzNiwwLDAsMSwuMy4wNDcsNS42MDYsNS42MDYsMCwwLDAsMS43MzIuMjkyLDUuNTg0LDUuNTg0LDAsMCwwLDEuNzMyLS4yOTIsMS4wMzYsMS4wMzYsMCwwLDEsLjMtLjA0Nyw0LjcyMSw0LjcyMSwwLDAsMSw0LjE3LDIuNTMyQTguMTEzLDguMTEzLDAsMCwxLDEwLjUsMjYuNjI5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtOCkiIGZpbGw9IiMwMzYiLz4KPC9zdmc+Cg=="
+                    alt=""
+                  />
+                  <li onClick={closeMenu} style={{ paddingLeft: "10px" }}>
+                    user
+                  </li>
+                </Link>
+              </ul>
+              <ul>
+                <Link
+                  to={"/master_comp"}
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                    display: "flex",
+                  }}
+                >
+                  <img
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOS4yMjMiIGhlaWdodD0iMjIuODg4IiB2aWV3Qm94PSIwIDAgMTkuMjIzIDIyLjg4OCI+CiAgPGcgaWQ9InJlYWRpbmctYm9vayIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQwLjk5NCkiPgogICAgPHBhdGggaWQ9IlBhdGhfMSIgZGF0YS1uYW1lPSJQYXRoIDEiIGQ9Ik02MC4yMTcsMTQuNzUyYTIuMjM5LDIuMjM5LDAsMCwwLTEuNzg4LTIuMTlWMTAuMTQ4YS42NzEuNjcxLDAsMCwwLS45MDYtLjYyOGwtMS4yOC40OGE3LjgxOCw3LjgxOCwwLDAsMC0yLjk4MS0xLjkzNiw0LjQ3LDQuNDcsMCwxLDAtNS4zMTIsMEE3LjgxOCw3LjgxOCwwLDAsMCw0NC45NjgsMTBsLTEuMjgtLjQ4YS42NzEuNjcxLDAsMCwwLS45MDYuNjI4djIuNDE0YTIuMjM1LDIuMjM1LDAsMCwwLDAsNC4zOHYyLjU5M2EuNjcxLjY3MSwwLDAsMCwuNDM1LjYyOGw3LjE1MywyLjY4MmEuNjc4LjY3OCwwLDAsMCwuNDcxLDBsNy4xNTMtMi42ODJhLjY3MS42NzEsMCwwLDAsLjQzNS0uNjI4VjE2Ljk0MkEyLjIzOSwyLjIzOSwwLDAsMCw2MC4yMTcsMTQuNzUyWk00Ny40NzYsNC40N0EzLjEyOSwzLjEyOSwwLDEsMSw1MC42MDUsNy42LDMuMTMzLDMuMTMzLDAsMCwxLDQ3LjQ3Niw0LjQ3Wm0zLjEyOSw0LjQ3YTYuNDcyLDYuNDcyLDAsMCwxLDQuMjQyLDEuNTgybC00LjI0MiwxLjU5MS00LjI0Mi0xLjU5MUE2LjQ3Miw2LjQ3MiwwLDAsMSw1MC42MDUsOC45NDFabS04LjI3LDUuODExYS45LjksMCwwLDEsLjg5NC0uODk0aC40NDd2MS43ODhoLS40NDdBLjkuOSwwLDAsMSw0Mi4zMzUsMTQuNzUyWm0xLjc4OCwyLjIxM2ExLjEyLDEuMTIsMCwwLDAsLjg5NC0xLjFWMTMuNjM1YTEuMTIsMS4xMiwwLDAsMC0uODk0LTEuMVYxMS4xMTVsNS44MTEsMi4xNzlWMjEuMjVsLTUuODExLTIuMTc5Wm03LjE1Myw0LjI4NVYxMy4yOTVsNS44MTEtMi4xNzlWMTIuNTRhMS4xMiwxLjEyLDAsMCwwLS44OTQsMS4xVjE1Ljg3YTEuMTIsMS4xMiwwLDAsMCwuODk0LDEuMXYyLjEwNlptNi43MDYtNS42aC0uNDQ3VjEzLjg1OGguNDQ3YS44OTQuODk0LDAsMCwxLDAsMS43ODhaIiBmaWxsPSIjMDM2Ii8+CiAgPC9nPgo8L3N2Zz4K"
+                    alt=""
+                  />
+                  <Link
+                    to={"/dashboard"}
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    {" "}
+                    <li onClick={closeMenu} style={{ paddingLeft: "10px" }}>
+                      My Dashboard
+                    </li>
+                  </Link>
+                </Link>
+              </ul>
+            </div>
+          ) : null}
 
           <ul>
             <Link
@@ -300,7 +329,13 @@ function Navbar() {
                   Logout
                 </Link>
               ) : (
-                <Link to="/login" onClick={closeMenu} style={{ textDecoration: "none", color: "#ff8787" }}>Login</Link>
+                <Link
+                  to="/login"
+                  onClick={closeMenu}
+                  style={{ textDecoration: "none", color: "#ff8787" }}
+                >
+                  Login
+                </Link>
               )}
             </li>
           </ul>

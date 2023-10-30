@@ -237,7 +237,7 @@ function Master_comp() {
         style={{
           textAlign: "center",
           paddingBottom: "50px",
-          paddingTop: "20px",
+          paddingTop: "90px",
         }}
       >
         Master Competitive Programming With Us

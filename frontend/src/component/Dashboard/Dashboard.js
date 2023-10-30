@@ -25,7 +25,7 @@ function Dashboard() {
       </div>
 
       <div className="dashboard-top-container">
-        {data
+        {  data
           .filter((item) => item.id === 22 || item.id === 23)
           .map((item, index) => {
             return (

@@ -627,8 +627,10 @@
 .full-stack-selection {
   margin: auto;
 
+  padding: 20px;
   background: #f7f7f7 0 0 no-repeat padding-box;
   display: flex;
+  gap: 10px;
   flex-wrap: wrap;
   border-bottom: 2px solid black;
 
@@ -701,6 +703,7 @@
 
 .full-stack-logo {
   display: flex;
+  background-color: white;
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
