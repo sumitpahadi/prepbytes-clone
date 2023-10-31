@@ -1,39 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import './loader.css'
+import loader from "../../component/logo.avif"
+
 function Reactjs() {
   const [apidata, setdata] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get("https://prepbytes.onrender.com/project")
       .then((response) => {
         setdata(response.data.data);
-        console.log(response);
-        console.log(response.data);
+        setLoading(false); // Set loading to false after data is fetched
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        setLoading(false); // Update loading in case of error
+      });
   }, []);
+
   return (
     <div className="project-container">
-       
-    {apidata
-      .filter((item) => item.id === 3)
-      .map((item, index) => {
-        return (
-          <div className="inner-part" key={index}>
-          <div className="inner-project">
-            <img src={item.img} alt="click here" />
-            <div className="inner-project-heading">
-              <h1>{item.name}</h1>
-              <p>{item.definition}</p>
-            </div>
-          </div>
-          <div className="heading-topics">
-            <h2>Most Important Topics of React js</h2>
-          </div>
-          <div className="topics">
-            <ol>
+      {loading ? ( // If loading, show the loader
+        <div className="prepbytes-loader"><img src={loader} alt="" /></div>
+      ) : (
+        apidata
+          .filter((item) => item.id === 3)
+          .map((item, index) => (
+            <div className="inner-part" key={index}>
+              <div className="inner-project">
+                <img src={item.img} alt="click here" />
+                <div className="inner-project-heading">
+                  <h1>{item.name}</h1>
+                  <p>{item.definition}</p>
+                </div>
+              </div>
+              <div className="heading-topics">
+                <h2>Most Important Topics of React js</h2>
+              </div>
+              <div className="topics">
+              <ol>
               <li>
                 <i class="fa-solid fa-circle-exclamation"></i>
                 {item.topics1}
@@ -75,10 +82,10 @@ function Reactjs() {
                 {item.topics10}
               </li>
             </ol>
-          </div>
-          <hr />
-          <div className="detail-explain">
-            <ol>
+              </div>
+              <hr />
+              <div className="detail-explain">
+              <ol>
               <li>{item.detail1}</li>
               <li>{item.detail2}</li>
               <li>{item.detail3}</li>
@@ -90,12 +97,12 @@ function Reactjs() {
               <li>{item.detail9}</li>
               <li>{item.detail10}</li>
             </ol>
-          </div>
-        </div>
-        );
-      })}
-  </div>
-  )
+              </div>
+            </div>
+          ))
+      )}
+    </div>
+  );
 }
 
-export default Reactjs
+export default Reactjs;
