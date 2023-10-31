@@ -151,7 +151,7 @@ function Login() {
               <div className="user-info">
                 <label htmlFor="pass">Password</label>
                 <input
-                  type="text"
+                  type="password"
                   id="pass"
                   name="password"
                   value={formData.password}

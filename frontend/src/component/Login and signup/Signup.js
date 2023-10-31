@@ -144,7 +144,7 @@ function Signup() {
               <div className="user-info">
                 <label htmlFor="pass">Password</label>
                 <input
-                  type="text"
+                  type="password"
                   name="password"
                   id="pass"
                   value={formData.password}
