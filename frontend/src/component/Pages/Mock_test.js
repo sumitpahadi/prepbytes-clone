@@ -81,7 +81,7 @@ function Mock_test() {
           addtocart({
             id: item.id,
             img: item.img,
-            testname: item.name,
+            name: item.name,
             price: item.price,
             quantity: 1,
           })

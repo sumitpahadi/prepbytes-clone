@@ -95,9 +95,8 @@
   width: 50%;
   font-size: 16px;
 }
-.mock-container h2{
+.mock-container h2 {
   margin-top: 88px;
-
 }
 
 .inner-feature {
@@ -224,13 +223,14 @@
   width: 100%;
   padding-top: 48px;
 }
-.project-container {
+/* .project-container {
   background: #f8f7fd;
-}
+} */
 .inner-project img {
   width: 50%;
   display: block;
-  box-shadow: 0px 0px 14px 4px grey;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 0px grey;
   margin: auto;
 }
 .inner-project-heading {
@@ -243,10 +243,17 @@
 }
 
 .inner-project-heading p {
-  font-size: 18px;
+  font-size: 17px;
+  
+
+text-align: left;
+ 
 }
 .inner-project-heading h1 {
   text-decoration: underline;
+  font-size: 28px;
+text-align: left;
+
 }
 
 .topics {
@@ -254,7 +261,7 @@
   display: block;
   margin: auto;
 
-  box-shadow: 0px 0px 14px 4px grey;
+  box-shadow: 0px 0px 3px 0px grey;
 }
 
 .heading-topics h2 {
@@ -266,6 +273,7 @@
 }
 .topics ol li i {
   color: #1777b7;
+  
   padding-right: 10px;
 }
 .topics ol {
@@ -277,12 +285,14 @@
 }
 .topics ol li {
   width: 200px;
+  font-size: 17px;
 }
 
 .detail-explain ol {
-  list-style: none;
+  list-style: circle;
 }
 .detail-explain ol li {
+  font-size: 15px;
   padding: 5px;
 }
 .detail-explain {
@@ -518,7 +528,7 @@
   padding: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto
+  margin: auto;
 }
 
 .select {
@@ -554,11 +564,11 @@
 /* -------------------------------------------end dection------------------------------------ */
 .layess {
   width: 85%;
- border-top:2px solid gray ;
- border-bottom:2px solid rgb(239, 231, 231) ;
- border-left:2px solid rgb(239, 231, 231) ;
- border-right:2px solid rgb(239, 231, 231) ;
-  
+  border-top: 2px solid gray;
+  border-bottom: 2px solid rgb(239, 231, 231);
+  border-left: 2px solid rgb(239, 231, 231);
+  border-right: 2px solid rgb(239, 231, 231);
+
   margin-bottom: 10px;
 }
 
@@ -582,7 +592,7 @@
   width: 600px;
 }
 
-.inner-full-stack-2{
+.inner-full-stack-2 {
   padding-top: 150px;
 }
 
@@ -645,7 +655,7 @@
 .full-stack-selection .inner-select-batch {
   width: 250px;
 }
-.tryfree{
+.tryfree {
   display: flex;
 }
 

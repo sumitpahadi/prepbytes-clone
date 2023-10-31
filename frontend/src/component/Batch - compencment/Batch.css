@@ -122,6 +122,12 @@ padding: 90px;
 @media screen and (max-width: 500px) {
   .jouney1 {
     width: 80%;
+    padding-left: 37px;
+  }
+  .journey {
+  padding: 0;
+  
+    justify-content: left;
   }
 
   .jouney1 .inner-jouney {

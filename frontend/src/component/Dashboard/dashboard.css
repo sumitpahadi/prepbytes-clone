@@ -2,15 +2,17 @@
   display: flex;
   border-bottom: 1px solid gray;
   padding: 10px;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 .logo-of-prepbytes img {
   width: 160px;
-  height: 70px;
+  height: 80px;
 }
 
 .username-of-client {
   display: flex;
+  padding-top: 15px;
 }
 .username-of-client h2 {
   background-color: #03a6ec;
@@ -26,6 +28,9 @@
 }
 .username-of-client p {
   height: 40px;
+  color: #00a5ec;
+  font-size: 20px;
+  text-decoration: underline;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +39,7 @@
 /* -----------------------------------------------dashboard ------------------------------------- */
 
 .dashboard-top-container {
-  background-color: #f0f3f4;
+  
   display: flex;
   
   padding: 30px;
@@ -45,9 +50,10 @@
 .courses-of-dash {
   border-radius: 9px;
   width: 250px;
+  background-color:  #f0f3f4;
   position: relative;
 
-  background-color: white;
+
 }
 
 .prepbytes-log {
@@ -123,7 +129,9 @@
 
 .test-conatiner{
     width: 250px;
-    background-color: white;
+
+    background-color:  #f0f3f4;
+
     position: relative;
    border-radius: 10px;
 }
@@ -135,4 +143,26 @@
     width: 60%;
     display: block;
     margin: auto;
+}
+
+
+/* Add these CSS styles to your stylesheet */
+
+.dashboard-empty {
+  animation-name: fadeInOut;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  text-align: center; /* Center text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }

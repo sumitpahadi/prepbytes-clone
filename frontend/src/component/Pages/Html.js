@@ -91,6 +91,7 @@ function Html() {
                 <li>{item.detail10}</li>
               </ol>
             </div>
+            
           </div>
           );
         })}

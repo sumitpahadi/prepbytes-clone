@@ -126,7 +126,6 @@ const mockdata = [
   {
     id: 13,
     name: "Computer Networks",
-
     img: "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/mock-test/topic/IPv4.svg",
     price: 1200,
   },
@@ -140,9 +139,7 @@ const mockdata = [
   {
     id: 15,
     name: "Algorithms",
-
     img: "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1623765556116-backtracking.svg",
-
     time: "60 min",
     price: 1200,
   },

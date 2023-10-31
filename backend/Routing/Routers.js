@@ -4,8 +4,6 @@ const {videoapi,mockapi,projectapi}=require("../Controller/usercontroller")
 const userauth = require("../Middleware/middleware");
 routes.get("/video",videoapi)
 routes.get("/mock",mockapi)
-
-
 routes.post("/register", register);
 routes.post("/login", login);
 routes.get("/dashboard", userauth, dashboard);

@@ -138,6 +138,7 @@
     }
     .IncomeSharingHeader-main__right--img {
         display: block;
+        padding-top: 40px;
     }
     .IncomeSharingHeader-main__right {
         background: none;
