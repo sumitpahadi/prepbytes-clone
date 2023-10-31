@@ -70,12 +70,12 @@ const Footer = () => {
             QUICK LINKS
           </div>
         <ul>
-          <Link><li>Interview Questions</li></Link>
-          <Link><li>Mock Tests</li></Link>
-          <Link><li>Placements Programs</li></Link>
-          <Link><li>Coding Courses</li></Link>
-          <Link><li>About Us</li></Link>
-          <Link><li>Blog</li></Link>
+          <Link to={'/video'}><li>Video Tutorial</li></Link>
+          <Link to ={"/mock_test"}><li>Mock Tests</li></Link>
+          <Link to ={"/full_stack"}><li>Full Stack Program</li></Link>
+          <Link to ={"/master_comp"}><li>Master Competitive Programming</li></Link>
+          <Link to ={"/elevation"}><li>Elevation Academy</li></Link>
+          <Link to ="/html"><li>Project</li></Link>
         </ul>
         </div>
 

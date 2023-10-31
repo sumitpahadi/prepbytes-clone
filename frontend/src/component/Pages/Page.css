@@ -20,11 +20,11 @@
 }
 .video_img img {
   width: 100%;
-  padding-top: 100px;
+  
 }
 .video .video-heading {
   padding: 40px;
-  padding-top: 150px;
+  
 
   width: 500px;
 }
@@ -95,9 +95,7 @@
   width: 50%;
   font-size: 16px;
 }
-.mock-container h2 {
-  margin-top: 88px;
-}
+
 
 .inner-feature {
   display: flex;
@@ -317,7 +315,7 @@ text-align: left;
 .master-comp {
   display: flex;
   padding-left: 50px;
-  padding-top: 120px;
+
   flex-wrap: wrap-reverse;
   gap: 30px;
   justify-content: center;
@@ -588,13 +586,10 @@ text-align: left;
 .full-stack .inner-full-stack {
   color: white;
   padding: 10px;
-  padding-top: 148px;
+
   width: 600px;
 }
 
-.inner-full-stack-2 {
-  padding-top: 150px;
-}
 
 .inner-full-stack img {
   background: transparent linear-gradient(90deg, #fff, #c7eaff) 0 0 no-repeat

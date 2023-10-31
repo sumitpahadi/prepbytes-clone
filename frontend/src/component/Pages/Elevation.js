@@ -11,8 +11,7 @@ function Elevation() {
   return (
     <div>
       {/* -------------------------elevation------------------------header------------------------------------- */}
-      <br />
-      <br /> <br />
+     
       <div className="IncomeSharingHeader">
         <section className="IncomeSharingHeader-main">
           <div className="IncomeSharingHeader-main__right">
