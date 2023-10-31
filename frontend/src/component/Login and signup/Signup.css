@@ -1,6 +1,6 @@
 .signup-container1 {
   display: flex;
-height: 800px;
+  height: 800px;
   align-items: center;
   justify-content: space-evenly;
   background-image: url(https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/blue-background.webp);
@@ -120,18 +120,17 @@ height: 800px;
 select {
   border: none;
 }
-.term input[type =radio]
-{
-    margin-bottom: 9px;
-    font-size: large;
+.term input[type="radio"] {
+  margin-bottom: 9px;
+  font-size: large;
 }
 .term {
-    display: flex;
-    gap: 10px;
-    padding-left: 13px;
+  display: flex;
+  gap: 10px;
+  padding-left: 13px;
 }
 .user-info1 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .user-info1 button {
   width: 70%;
@@ -139,7 +138,7 @@ select {
   height: 40px;
   color: white;
   display: block;
- 
+
   margin: auto;
   border: none;
   background: transparent linear-gradient(180deg, #4b8ce8, #4b8ce8) 0 0
@@ -171,7 +170,17 @@ select {
   }
 
   .signup-container1 {
- height: auto;
-    
+    height: auto;
+  }
+  .heading-conatiner {
+    display: flex;
+    width: 80px;
+
+    height: 74px;
+    margin-top: 12px;
+  }
+  .heading-conatiner img {
+    width: 30px;
+    height: 30px;
   }
 }

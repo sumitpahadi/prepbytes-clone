@@ -45,7 +45,7 @@ function Master_comp() {
         {
           id: 22,
           name: "Master Competittive Program",
-          price: 10000,
+          price: 25000,
           quantity: 1,
         },
       ],

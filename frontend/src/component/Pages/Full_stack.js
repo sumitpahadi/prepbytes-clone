@@ -46,7 +46,7 @@ function Full_stack() {
         {
           id: 23,
           name: "full stack programm ",
-          price: 150000,
+          price: 30000,
           quantity: 1,
         },
       ],

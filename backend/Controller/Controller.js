@@ -1,5 +1,6 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const enquiry = require("../Model/Enqiry");
 
 const userdata = require("../Model/Usermodel");
 const secretkey = "smnfksjfherjgherjg";
@@ -7,9 +8,7 @@ const saltnumber = 10;
 
 const register = async (req, res) => {
   try {
-    const { username, email, password, collegename,passingyear} = req.body;
-
-   
+    const { username, email, password, collegename, passingyear } = req.body;
 
     // Check if the email is already in use
     const existingUser = await userdata.findOne({ email });
@@ -20,14 +19,13 @@ const register = async (req, res) => {
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, saltnumber);
 
-
     // Create the user
     const user = await userdata.create({
       username,
       email,
       password: hashedPassword,
-     collegename,
-     passingyear
+      collegename,
+      passingyear,
     });
 
     console.log(user);
@@ -70,4 +68,21 @@ const dashboard = (req, res) => {
   });
 };
 
-module.exports = { register, login, dashboard };
+const queryfrom = async (req, res) => {
+  try {
+    const { name, email, phone, Query } = req.body;
+
+    const enquirydata = await enquiry.create({
+      name,
+      email,
+      phone,
+      Query,
+    });
+
+    res.status(200).send({ formdata: enquirydata });
+  } catch (error) {
+    res.status(500).send("error occured", e);
+  }
+};
+
+module.exports = { register, login, dashboard ,queryfrom};
