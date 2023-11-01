@@ -20,7 +20,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/form", formData)
+      .post("https://prepbytes.onrender.com/form", formData)
       .then((response) => {
         console.log(response.data);
 
