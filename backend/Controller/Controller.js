@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const enquiry = require("../Model/Enqiry");
+const callback_form = require("../Model/Callback");
 
 const userdata = require("../Model/Usermodel");
 const secretkey = "smnfksjfherjgherjg";
@@ -79,10 +80,28 @@ const queryfrom = async (req, res) => {
       Query,
     });
 
-    res.status(200).send({ formdata: enquirydata });
+    res.status(200).send({ formdata: enquirydata,msg:"thank you for submitting "  });
   } catch (error) {
     res.status(500).send("error occured", e);
   }
 };
 
-module.exports = { register, login, dashboard ,queryfrom};
+const form_callback = async (req, res) => {
+  try {
+    const { name, email, phone, highest_degree, branch, passing_out } =
+      req.body;
+    const callback_form_data = await callback_form.create({
+      name,
+      email,
+      phone,
+      highest_degree,
+      branch,
+      passing_out,
+    });
+    res.status(200).send({ formdata: callback_form_data,msg:"thank you for submitting " });
+  } catch (error) {
+    res.status(500).send("error occured", e);
+  }
+};
+
+module.exports = { register, login, dashboard, queryfrom, form_callback };

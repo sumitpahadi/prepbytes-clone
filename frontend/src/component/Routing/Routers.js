@@ -17,6 +17,7 @@ import Signup from "../Login and signup/Signup";
 import Login from "../Login and signup/Login";
 import Cancel from "../Dashboard/Cancel";
 import Dashboard from "../Dashboard/Dashboard"
+import CallBack from "../Call-back-form/CallBack";
 
 function Routers() {
   const navigate = useNavigate();
@@ -45,6 +46,7 @@ function Routers() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cancel" element={<Cancel />} />
+        <Route path="/callback" element={<CallBack />} />
       </Routes>
      
       {shouldShowNavbarAndFooter() && <Footer />}

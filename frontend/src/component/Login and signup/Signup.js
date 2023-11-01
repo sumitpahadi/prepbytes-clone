@@ -125,7 +125,8 @@ function Signup() {
                   name="username"
                   value={formData.username}
                   onChange={handleChange}
-                  required />
+                  required
+                />
               </div>
               <div className="user-info">
                 <label htmlFor="email">Email</label>
@@ -135,7 +136,8 @@ function Signup() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  required />
+                  required
+                />
               </div>
               <div className="user-info">
                 <label htmlFor="number">Phone no</label>
@@ -178,10 +180,19 @@ function Signup() {
                 </div>
               </div>
               <div className="term">
-                <input type="radio" /> I agree to the{" "}
+                <input type="radio"  required/> I agree to the{" "}
                 <p style={{ color: "#4b8ce8" }}>terms and conditions</p>
               </div>
-              <p style={{ color: "red",    display: "block",   margin: "auto",width:"90%" }}>{data}</p>
+              <p
+                style={{
+                  color: "red",
+                  display: "block",
+                  margin: "auto",
+                  width: "90%",
+                }}
+              >
+                {data}
+              </p>
 
               <div className="user-info1">
                 <button type="submit">SIGN UP</button>

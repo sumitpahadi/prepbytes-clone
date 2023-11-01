@@ -3,6 +3,7 @@ import axios from "axios";
 
 import { useState } from "react";
 const Form = () => {
+  const [msg,setmsg]=useState()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,9 +30,10 @@ const Form = () => {
           phone: "",
           Query: "",
         });
+        setmsg(response.data.msg)
 
 
-        alert("succes full sent")
+        
       })
       .catch((error) => {
         console.error("Error registering:", error);
@@ -99,9 +101,8 @@ const Form = () => {
                 onChange={handleChange}
               ></textarea>
               <button type="submit">Request a Call Back</button>
-              <p>
-                Thanks for registering with us. Our Team will get back to you
-                soon.
+              <p style={{color:"red"}}>
+               {msg}
               </p>
             </form>
           </div>
