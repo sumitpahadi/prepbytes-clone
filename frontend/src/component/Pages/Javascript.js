@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import loader from "../../component/logo.avif";
+import {Link} from "react-router-dom"
+
 
 function Javascript() {
   const [apidata, setdata] = useState([]);
@@ -21,6 +23,10 @@ function Javascript() {
 
   return (
     <div className="project-container">
+            <div className="header-of-project">
+        <h1>Project Explanation </h1>
+        <p>Here is the explanation of HTML</p>
+      </div>
       {loading ? (
         <div className="prepbytes-loader">
           <img src={loader} alt="Loading..." />
@@ -37,68 +43,71 @@ function Javascript() {
                     <h1>{item.name}</h1>
                     <p>{item.definition}</p>
                   </div>
+                  <div className="detail-explain">
+                    <ul>
+                      <li>{item.detail1}</li>
+                      <li>{item.detail2}</li>
+                      <li>{item.detail3}</li>
+                      <li>{item.detail4}</li>
+                      <li>{item.detail5}</li>
+                      <li>{item.detail6}</li>
+                      <li>{item.detail7}</li>
+                      <li>{item.detail8}</li>
+                      <li>{item.detail9}</li>
+                      <li>{item.detail10}</li>
+                    </ul>
+                  </div>
                 </div>
-                <div className="heading-topics">
-                  <h2>Most Important Topics of Javascript</h2>
-                </div>
+
                 <div className="topics">
-                <ol>
-                  <li>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    {item.topics1}
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    {item.topics2}
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    {item.topics3}
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    {item.topics4}
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    {item.topics5}
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    {item.topics6}
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    {item.topics7}
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    {item.topics8}
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    {item.topics9}
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    {item.topics10}
-                  </li>
-                </ol>
-                </div>
-                <hr />
-                <div className="detail-explain">
-                <ol>
-                  <li>{item.detail1}</li>
-                  <li>{item.detail2}</li>
-                  <li>{item.detail3}</li>
-                  <li>{item.detail4}</li>
-                  <li>{item.detail5}</li>
-                  <li>{item.detail6}</li>
-                  <li>{item.detail7}</li>
-                  <li>{item.detail8}</li>
-                  <li>{item.detail9}</li>
-                  <li>{item.detail10}</li>
-                </ol>
+                  <div className="heading-topics">
+                    <h2>Most Important Topics of Javascript</h2>
+                  </div>
+                  <ol>
+                    <li>
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      {item.topics1}
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      {item.topics2}
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      {item.topics3}
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      {item.topics4}
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      {item.topics5}
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      {item.topics6}
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      {item.topics7}
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      {item.topics8}
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      {item.topics9}
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                      {item.topics10}
+                    </li>
+                  </ol>
+                  <iframe width="949" height="534" src="https://www.youtube.com/embed/ER9SspLe4Hg?list=PLu0W_9lII9ahR1blWXxgSlL4y9iQBnLpR" title="Introduction to JavaScript + Setup | JavaScript Tutorial in Hindi #1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  
+               <Link to={"https://sumitpahadi.github.io/digital-clock-project/"}>   <h1>Click Here To See Project </h1></Link>
                 </div>
               </div>
             );

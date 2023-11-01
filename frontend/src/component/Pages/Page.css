@@ -20,11 +20,9 @@
 }
 .video_img img {
   width: 100%;
-  
 }
 .video .video-heading {
   padding: 40px;
-  
 
   width: 500px;
 }
@@ -95,7 +93,6 @@
   width: 50%;
   font-size: 16px;
 }
-
 
 .inner-feature {
   display: flex;
@@ -214,101 +211,121 @@
 
 /* -------------------------------project pages---------------------- */
 
-.inner-project {
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-  width: 100%;
-  padding-top: 48px;
-}
-/* .project-container {
-  background: #f8f7fd;
-} */
-.inner-project img {
-  width: 50%;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0px 0px 3px 0px grey;
-  margin: auto;
-}
-.inner-project-heading {
-  width: 600px;
+.header-of-project {
+  background: url(https://blog.prepbytes.com/wp-content/uploads/2019/11/Header_Final-1.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 200px;
+  background-size: cover;
+  box-shadow: 0 1px 0 rgba(17, 17, 26, 0.1);
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  text-align: center;
-  margin: auto;
+  padding: 51px;
+}
+.header-of-project h1 {
+  font-weight: bold;
+
+  text-decoration: underline;
+}
+.header-of-project p {
+  font-size: 22px;
+}
+
+.inner-part {
+  padding: 30px;
+ 
+  display: flex;
+  justify-content: space-around;
+}
+.inner-project {
+  width: 40%;
+}
+.inner-project-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inner-project-heading h1 {
+  padding-top: 40px;
+  font-size: 32px;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .inner-project-heading p {
-  font-size: 17px;
-  
-
-text-align: left;
- 
+  color: #636e72;
+  font-weight: 500;
+  margin-top: 18px;
 }
-.inner-project-heading h1 {
-  text-decoration: underline;
-  font-size: 28px;
-text-align: left;
 
+.detail-explain {
+  color: #636e72;
+  font-weight: 500;
+  margin-top: 18px;
+}
+.detail-explain ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .topics {
-  width: 60%;
-  display: block;
-  margin: auto;
-
-  box-shadow: 0px 0px 3px 0px grey;
+  width: 40%;
 }
 
-.heading-topics h2 {
+.inner-project img {
+  width: 100%;
+  box-shadow: 1px 0px 8px 4px gray;
+}
+
+.inner-project-heading {
+  display: flex;
+
+  flex-direction: column;
+}
+.topics .heading-topics {
+  height: 60px;
   text-align: center;
-  font-weight: bold;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 30px;
+ text-decoration: underline;
+}
+
+.topics ol li {
+  border-bottom: 2px solid black;
+  height: 70px;
+  padding: 10px;
 }
 .topics ol li i {
-  color: #1777b7;
-  
   padding-right: 10px;
+  color:#00a6eb;
 }
-.topics ol {
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-  justify-content: left;
-  display: flex;
-}
-.topics ol li {
-  width: 200px;
-  font-size: 17px;
+.topics iframe{
+  width: 100%;
+  border-radius: 9px;
+  height: 300px;
 }
 
-.detail-explain ol {
-  list-style: circle;
+.topics a h1{
+  font-size: 29px;
+  text-decoration: underline;
 }
-.detail-explain ol li {
-  font-size: 15px;
-  padding: 5px;
-}
-.detail-explain {
-  padding: 20px;
-  font-size: 18px;
-  font-weight: 500;
-}
-.inner-part hr {
-  height: 4px;
-  margin-top: 50px;
-  box-shadow: 0px 0px 14px 4px grey;
-  background-color: black;
-}
-@media screen and (max-width: 1000px) {
-  .inner-project img {
-    width: 80%;
+
+@media screen and (max-width:850px) {
+  .inner-part{
+    display: flex;
+    flex-direction: column;
   }
+  .inner-project{
+    width: 100%;
+  }
+  .topics{
+    width: 100%;
+  }
+  
 }
+/*  */
 
 /* --------------------------------------------------------------------------------master competitive programming------------------------ */
 
@@ -589,7 +606,6 @@ text-align: left;
 
   width: 600px;
 }
-
 
 .inner-full-stack img {
   background: transparent linear-gradient(90deg, #fff, #c7eaff) 0 0 no-repeat

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import {Link} from "react-router-dom"
 import loader from "../../component/logo.avif"
 function Reactjs() {
   const [apidata, setdata] = useState([]);
@@ -21,6 +22,10 @@ function Reactjs() {
 
   return (
     <div className="project-container">
+         <div className="header-of-project">
+        <h1>Project Explanation </h1>
+        <p>Here is the explanation of HTML</p>
+      </div>
       {loading ? ( // If loading, show the loader
                <div className="prepbytes-loader"><img src={loader} alt="" /></div>
 
@@ -36,11 +41,26 @@ function Reactjs() {
                     <h1>{item.name}</h1>
                     <p>{item.definition}</p>
                   </div>
+                  <div className="detail-explain">
+                  <ul>
+                    <li>{item.detail1}</li>
+                    <li>{item.detail2}</li>
+                    <li>{item.detail3}</li>
+                    <li>{item.detail4}</li>
+                    <li>{item.detail5}</li>
+                    <li>{item.detail6}</li>
+                    <li>{item.detail7}</li>
+                    <li>{item.detail8}</li>
+                    <li>{item.detail9}</li>
+                    <li>{item.detail10}</li>
+                  </ul>
                 </div>
+                </div>
+            
+                <div className="topics">
                 <div className="heading-topics">
                   <h2>Most Important Topics of React js</h2>
                 </div>
-                <div className="topics">
                   <ol>
                     <li>
                       <i class="fa-solid fa-circle-exclamation"></i>
@@ -83,22 +103,13 @@ function Reactjs() {
                       {item.topics10}
                     </li>
                   </ol>
+                  <iframe width="949" height="534" src="https://www.youtube.com/embed/Oe421EPjeBE" title="Node.js and Express.js - Full Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+               <Link to={"https://ecommerse-eight.vercel.app/"}>   <h1>Click Here To See Project </h1></Link>
                 </div>
-                <hr />
-                <div className="detail-explain">
-                  <ol>
-                    <li>{item.detail1}</li>
-                    <li>{item.detail2}</li>
-                    <li>{item.detail3}</li>
-                    <li>{item.detail4}</li>
-                    <li>{item.detail5}</li>
-                    <li>{item.detail6}</li>
-                    <li>{item.detail7}</li>
-                    <li>{item.detail8}</li>
-                    <li>{item.detail9}</li>
-                    <li>{item.detail10}</li>
-                  </ol>
-                </div>
+               
+               
               </div>
             ))}
         </div>

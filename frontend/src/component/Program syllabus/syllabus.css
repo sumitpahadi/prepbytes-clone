@@ -249,7 +249,7 @@
 
 .collapse1.open {
   max-height: 500px; /* Adjust the maximum height to suit your content */
-  transition: max-height 0.5s ease-in-out; /* Longer duration for a smoother effect */
+  transition: max-height 0.5s  ease-in-out; /* Longer duration for a smoother effect */
   animation-name: expand;
   animation-duration: 0.5s;
 }
