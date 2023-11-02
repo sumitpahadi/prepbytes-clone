@@ -209,6 +209,13 @@
   gap: 20px;
 }
 
+@media screen  and (max-width:850px){
+  .mock-container p {
+    width: 100%;
+    font-size: 16px;
+  }
+  
+}
 /* -------------------------------project pages---------------------- */
 
 .header-of-project {
