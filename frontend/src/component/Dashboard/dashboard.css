@@ -18,7 +18,7 @@
   background-color: #03a6ec;
   color: white;
   height: 40px;
-  
+
   width: 40px;
   display: flex;
   margin-right: 10px;
@@ -37,11 +37,92 @@
 }
 
 /* -----------------------------------------------dashboard ------------------------------------- */
+.dashboard-toogle {
+  display: flex;
+  width: 100%;
+}
+.inner-dashboard-detail {
+  width: 30%;
+ 
+  height: 100vh;
+}
+.inner-dashboard-detail {
+  box-shadow: 10px 0 10px -5px rgb(33 35 38/10%);
+  transition: all 0.3s ease;
+  width: 50px;
+}
+
+.inner-dashboard-detail.expanded {
+  width: 300px;
+}
+
+.inner-dashboard-detail h1{
+  color:gray;
+  margin-top: 20px;
+  font-size: 22px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.inner-dashboard-detail h1:hover{
+  color: white;
+  background-color: #00a5ec;
+}
+
+.hamburger1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover .line {
+  background-color: #555;
+}
+.expanded .line {
+  width: 25px; /* Adjust this value to change the width on expansion */
+}
+
+.expanded .line:nth-child(2) {
+  opacity: 0;
+}
+
+.expanded .line:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 7px)
+}
+
+.expanded .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Animation for the hamburger to transform into an 'X' when clicked */
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 
 .dashboard-top-container {
-  
   display: flex;
-  
+ 
+  width: 100%;
+  height: 100vh;
+
   padding: 30px;
   gap: 30px;
   flex-wrap: wrap;
@@ -50,10 +131,9 @@
 .courses-of-dash {
   border-radius: 9px;
   width: 250px;
-  background-color:  #f0f3f4;
+  height: 250px;
+  background-color: #f0f3f4;
   position: relative;
-
-
 }
 
 .prepbytes-log {
@@ -113,44 +193,40 @@
   right: 10%;
 }
 
+.backimage {
+  bottom: 0px;
+  right: 0px;
 
-
-
-.backimage{
-    bottom: 0px;
-    right: 0px;
-
-    width: 100%;
-    z-index: 0;
-    position: absolute;
+  width: 100%;
+  z-index: 0;
+  position: absolute;
 }
 
 /* -----------------------------------------test----------------------- */
 
-.test-conatiner{
-    width: 250px;
-
-    background-color:  #f0f3f4;
-
-    position: relative;
-   border-radius: 10px;
+.test-conatiner {
+  width: 250px;
+  height: 250px;
+  background-color: #f0f3f4;
+  position: relative;
+  border-radius: 10px;
 }
 
 .iamge-cont-for-test {
-    width: 100%;
+  width: 100%;
 }
-.iamge-cont-for-test img{
-    width: 60%;
-    display: block;
-    margin: auto;
+.iamge-cont-for-test img {
+  width: 60%;
+  display: block;
+  margin: auto;
 }
-
 
 /* Add these CSS styles to your stylesheet */
 
 .dashboard-empty {
   animation-name: fadeInOut;
   animation-duration: 2s;
+  width: 100%;
   animation-iteration-count: infinite;
   text-align: center; /* Center text */
   display: flex;
@@ -159,10 +235,41 @@
 }
 
 @keyframes fadeInOut {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
   }
   50% {
     opacity: 1;
   }
+}
+
+
+@media screen and (max-width:500px) {
+
+  .dashboard-top-container{
+    position: absolute;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    z-index: 0;
+  }
+  
+  .inner-dashboard-detail{
+    position: relative;
+    background-color: white;
+    z-index: 12;
+   width: 0px;
+
+  }
+  .username-of-client p{
+    display: none;
+  }
+  
+.inner-dashboard-detail.expanded {
+  position: relative;
+  background-color: white;
+  z-index: 12;
+  width: 80%;
+}
 }

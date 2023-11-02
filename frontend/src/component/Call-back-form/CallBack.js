@@ -25,7 +25,7 @@ const CallBack = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/callback", formData)
+      .post("https://prepbytes.onrender.com/callback", formData)
       .then((response) => {
         setmsg(response.data.msg);
         console.log(response.data.msg);
@@ -152,17 +152,7 @@ const CallBack = (props) => {
                   </select>
                 </div>
 
-                <div className="RegisterModal__form-working-professional">
-                  <label htmlFor="">Are you a Working Professional? *</label>
-                  <div className="RegisterModal__form-button">
-                    <div className="RegisterModal__form-working-professional-button">
-                      Yes
-                    </div>
-                    <div className="RegisterModal__form-working-professional-button-no">
-                      No
-                    </div>
-                  </div>
-                </div>
+           
 
                 <div className="RegisterModal-form-accept-terms-and-conditions-container">
                   <input
