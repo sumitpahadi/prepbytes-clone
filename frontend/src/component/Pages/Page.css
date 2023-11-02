@@ -213,9 +213,9 @@
 
 .header-of-project {
   background: url(https://blog.prepbytes.com/wp-content/uploads/2019/11/Header_Final-1.jpg);
-  background-position: 50%;
+  background-position: 100%;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 220px;
   background-size: cover;
   box-shadow: 0 1px 0 rgba(17, 17, 26, 0.1);
   display: flex;
