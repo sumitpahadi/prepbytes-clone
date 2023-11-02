@@ -32,7 +32,7 @@ function Reactjs() {
       ) : (
         <div>
           {apidata
-            .filter((item) => item.id === 3)
+            .filter((item) => item.id === 4)
             .map((item, index) => (
               <div className="inner-part" key={index}>
                 <div className="inner-project">
