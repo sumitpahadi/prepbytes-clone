@@ -24,7 +24,7 @@ function Css() {
     <div className="project-container">
       <div className="header-of-project">
         <h1>Project Explanation </h1>
-        <p>Here is the explanation of HTML</p>
+        <p>Here is the explanation of CSS</p>
       </div>
       {loading ? (
         <div className="prepbytes-loader">

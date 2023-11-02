@@ -107,7 +107,7 @@ const project_data = [
   {
     id: 4,
     name: "Nodejs",
-    img:"https://res.cloudinary.com/dpqbph9ya/image/upload/f_auto,q_auto/epxgar9fgyf5byd47xym",
+    img:"https://res.cloudinary.com/dpqbph9ya/image/upload/f_auto,q_auto/v1/prepbytes%20clone/vos6s1bck9ru8xlhvpww",
     topics1: "Core Modules:",
     topics2: "NPM (Node Package Manager):",
     topics3: "Event Loop:",

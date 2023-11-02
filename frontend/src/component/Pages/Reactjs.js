@@ -25,7 +25,7 @@ function Reactjs() {
     <div className="project-container">
       <div className="header-of-project">
         <h1>Project Explanation </h1>
-        <p>Here is the explanation of HTML</p>
+        <p>Here is the explanation of React js</p>
       </div>
       {loading ? ( // If loading, show the loader
         <div className="prepbytes-loader">
